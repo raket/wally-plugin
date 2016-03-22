@@ -1,0 +1,7 @@
+.xdsoft_datetimepicker.xdsoft_noselect {
+	z-index: 560100; /* bigger than fw.OptionsModal's z-index */
+}
+
+.fw-backend-option-input-type-datetime-picker .fw-option-help-in-input {
+	top: 4px !important;
+}
