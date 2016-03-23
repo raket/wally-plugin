@@ -37,7 +37,7 @@ msgid "Ett tillägg för att förbättra tillgänglighet."
 msgstr ""
 
 #. Author of the plugin
-msgid "Edvin Brobeck"
+msgid "Raket Webbyrå"
 msgstr ""
 
 #. Name of the plugin

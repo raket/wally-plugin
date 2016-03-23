@@ -5,7 +5,7 @@
  Description: Ett tillägg för att förbättra tillgänglighet.
  Text Domain: wally
  Domain Path: /lang
- Author: Edvin Brobeck
+ Author: Raket Webbyrå
  Version: 0.31
  */
 if ( ! defined( 'ABSPATH' ) ) die( 'Forbidden' );
