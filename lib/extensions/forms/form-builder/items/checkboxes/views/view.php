@@ -19,6 +19,7 @@ $options = $item['options'];
                 <p><em><?php echo $options['info'] ?></em></p>
             <?php endif; ?>
             <fieldset class="custom-checkbox">
+                <legend style="display: none"></legend>
                 <?php foreach ($choices as $choice): ?>
                     <?php $choice['id'] = 'rand-'. fw_unique_increment(); ?>
                     <div class="options">
