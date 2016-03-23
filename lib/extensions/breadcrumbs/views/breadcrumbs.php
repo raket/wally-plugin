@@ -46,25 +46,23 @@
 
 	<?php $items[0]['name'] = __('Start', 'wally') ?>
 
-	<ul class="breadcrumbs">
-		<li>
-			<span><?php _e('Du är här', 'wally') ?>:</span>
-		</li>
-		<?php for ( $i = 0; $i < count( $items ); $i ++ ) : ?>
-			<?php if ( $i == ( count( $items ) - 1 ) ) : ?>
-				<li class="last-item"><?php echo $items[ $i ]['name'] ?></li>
-			<?php elseif ( $i == 0 ) : ?>
-				<li class="first-item">
-				<?php if( isset( $items[ $i ]['url'] ) ) : ?>
-					<a href="<?php echo esc_attr($items[ $i ]['url']) ?>"><?php echo $items[ $i ]['name'] ?></a></li>
-				<?php else : echo $items[ $i ]['name']; endif ?>
-			<?php
-			else : ?>
+	<div class="breadcrumbs"><span><?php _e('Du är här', 'wally') ?>:</span><ul>
+			<?php for ( $i = 0; $i < count( $items ); $i ++ ) : ?>
+				<?php if ( $i == ( count( $items ) - 1 ) ) : ?>
+					<li class="last-item"><?php echo $items[ $i ]['name'] ?></li>
+				<?php elseif ( $i == 0 ) : ?>
+					<li class="first-item">
+					<?php if( isset( $items[ $i ]['url'] ) ) : ?>
+						<a href="<?php echo esc_attr($items[ $i ]['url']) ?>"><?php echo $items[ $i ]['name'] ?></a></li>
+					<?php else : echo $items[ $i ]['name']; endif ?>
+					<?php
+				else : ?>
 				<li class="<?php echo( $i - 1 ) ?>-item">
 					<?php if( isset( $items[ $i ]['url'] ) ) : ?>
 						<a href="<?php echo esc_attr($items[ $i ]['url']) ?>"><?php echo $items[ $i ]['name'] ?></a></li>
 					<?php else : echo $items[ $i ]['name']; endif ?>
-			<?php endif ?>
-		<?php endfor ?>
-	</ul>
+				<?php endif ?>
+			<?php endfor ?>
+
+		</ul></div>
 <?php endif ?>

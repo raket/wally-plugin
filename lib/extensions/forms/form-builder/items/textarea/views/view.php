@@ -12,9 +12,10 @@ $options = $item['options'];
         <label for="<?php echo esc_attr($attr['id']) ?>"><?php echo fw_htmlspecialchars($item['options']['label']) ?>
             <?php if ($options['required']): ?><sup>* (<?php _e('Required', 'fw');?>)</sup><?php endif; ?>
         </label>
-        <textarea <?php echo fw_attr_to_html($attr) ?>><?php echo fw_htmlspecialchars($value) ?></textarea>
         <?php if ($options['info']): ?>
             <p><em><?php echo $options['info'] ?></em></p>
         <?php endif; ?>
+        <textarea <?php echo fw_attr_to_html($attr) ?>><?php echo fw_htmlspecialchars($value) ?></textarea>
+
     </div>
 </div>

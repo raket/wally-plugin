@@ -15,6 +15,9 @@ $options = $item['options'];
             <label><?php echo fw_htmlspecialchars($item['options']['label']) ?>
                 <?php if ($options['required']): ?><sup>* (<?php _e('Required', 'fw');?>)</sup><?php endif; ?>
             </label>
+            <?php if ($options['info']): ?>
+                <p><em><?php echo $options['info'] ?></em></p>
+            <?php endif; ?>
             <div class="custom-radio">
                 <?php foreach ($choices as $choice): ?>
                     <?php $choice['id'] = 'rand-'. fw_unique_increment(); ?>
@@ -24,9 +27,7 @@ $options = $item['options'];
                     </div>
                 <?php endforeach; ?>
             </div>
-            <?php if ($options['info']): ?>
-                <p><em><?php echo $options['info'] ?></em></p>
-            <?php endif; ?>
+
         </div>
     </div>
 <?php endif; ?>

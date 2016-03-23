@@ -11,9 +11,9 @@ $options = $item['options'];
         <label for="<?php echo esc_attr($attr['id']) ?>"><?php echo fw_htmlspecialchars($item['options']['label']) ?>
             <?php if ($options['required']): ?><sup>* (<?php _e('Required', 'fw');?>)</sup><?php endif; ?>
         </label>
-        <input <?php echo fw_attr_to_html($attr) ?>>
         <?php if ($options['info']): ?>
             <p><em><?php echo $options['info'] ?></em></p>
         <?php endif; ?>
+        <input <?php echo fw_attr_to_html($attr) ?>>
     </div>
 </div>
