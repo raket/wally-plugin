@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Wally\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-10 16:11+0100\n"
-"PO-Revision-Date: 2016-03-10 16:11+0100\n"
+"PO-Revision-Date: 2016-03-23 10:54+0100\n"
 "Last-Translator: raket <daniel@raket.nu>\n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -324,11 +324,11 @@ msgstr "Positiv"
 
 #: /lib/extensions/shortcodes/shortcodes/dropdown/config.php:15
 msgid "Select button"
-msgstr "Alternativknapp"
+msgstr "Kombinations-meny"
 
 #: /lib/extensions/shortcodes/shortcodes/dropdown/config.php:16
 msgid "Add a button with multiple alternatives"
-msgstr "Lägg till en knapp med utfällbara alternativ"
+msgstr "Lägg till en kombinationsmeny med alternativ"
 
 #: /lib/extensions/shortcodes/shortcodes/dropdown/options.php:7
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
@@ -4413,7 +4413,7 @@ msgstr "Lägg till rad"
 
 #: /lib/unyson/framework/extensions/shortcodes/shortcodes/tabs/config.php:9
 msgid "Add some Tabs"
-msgstr "Lägg till tabbar"
+msgstr "Lägg till flikar"
 
 #: /lib/unyson/framework/extensions/shortcodes/shortcodes/tabs/options.php:9
 msgid "Add/Edit Tab"
