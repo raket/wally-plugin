@@ -18,7 +18,7 @@ $options = $item['options'];
             <?php if ($options['info']): ?>
                 <p><em><?php echo $options['info'] ?></em></p>
             <?php endif; ?>
-            <div class="custom-checkbox">
+            <fieldset class="custom-checkbox">
                 <?php foreach ($choices as $choice): ?>
                     <?php $choice['id'] = 'rand-'. fw_unique_increment(); ?>
                     <div class="options">
@@ -26,7 +26,7 @@ $options = $item['options'];
                         <label for="<?php echo esc_attr($choice['id']) ?>"><?php echo $choice['value'] ?></label>
                     </div>
                 <?php endforeach; ?>
-            </div>
+            </fieldset>
         </div>
     </div>
 <?php endif; ?>
