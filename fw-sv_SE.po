@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Wally\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-10 16:11+0100\n"
-"PO-Revision-Date: 2016-03-23 10:54+0100\n"
+"PO-Revision-Date: 2016-03-23 11:17+0100\n"
 "Last-Translator: raket <daniel@raket.nu>\n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -1929,7 +1929,7 @@ msgstr ""
 #: /lib/unyson/framework/extensions/breadcrumbs/includes/class-breadcrumbs-
 #: builder.php:124
 msgid "Searching for:"
-msgstr ""
+msgstr "Söker efter:"
 
 #: /lib/unyson/framework/extensions/breadcrumbs/includes/class-breadcrumbs-
 #: builder.php:248
