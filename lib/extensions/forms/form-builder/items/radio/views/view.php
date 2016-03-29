@@ -13,7 +13,7 @@ $options = $item['options'];
     <div class="<?php echo esc_attr(fw_ext_builder_get_item_width('form-builder', $item['width'] .'/frontend_class')) ?>">
         <div class="field-radio input-styled">
             <fieldset class="custom-radio">
-                <legend><?php echo fw_htmlspecialchars($item['options']['label']) ?>
+                <legend class="form__label"><?php echo fw_htmlspecialchars($item['options']['label']) ?>
                     <?php if ($options['required']): ?><sup>* (<?php _e('Required', 'fw');?>)</sup><?php endif; ?>
                 </legend>
                 <?php if ($options['info']): ?>
@@ -27,7 +27,6 @@ $options = $item['options'];
                     </div>
                 <?php endforeach; ?>
             </fieldset>
-
         </div>
     </div>
 <?php endif; ?>
