@@ -12,14 +12,13 @@ $options = $item['options'];
 <?php else: ?>
     <div class="<?php echo esc_attr(fw_ext_builder_get_item_width('form-builder', $item['width'] .'/frontend_class')) ?>">
         <div class="field-radio input-styled">
-            <label><?php echo fw_htmlspecialchars($item['options']['label']) ?>
-                <?php if ($options['required']): ?><sup>* (<?php _e('Required', 'fw');?>)</sup><?php endif; ?>
-            </label>
-            <?php if ($options['info']): ?>
-                <p><em><?php echo $options['info'] ?></em></p>
-            <?php endif; ?>
             <fieldset class="custom-radio">
-                <legend style="display: none"></legend>
+                <legend><?php echo fw_htmlspecialchars($item['options']['label']) ?>
+                    <?php if ($options['required']): ?><sup>* (<?php _e('Required', 'fw');?>)</sup><?php endif; ?>
+                </legend>
+                <?php if ($options['info']): ?>
+                    <p><em><?php echo $options['info'] ?></em></p>
+                <?php endif; ?>
                 <?php foreach ($choices as $choice): ?>
                     <?php $choice['id'] = 'rand-'. fw_unique_increment(); ?>
                     <div class="options">
