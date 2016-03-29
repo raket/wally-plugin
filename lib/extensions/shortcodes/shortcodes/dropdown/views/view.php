@@ -7,9 +7,9 @@
 	<div class="dropdown__drawer" data-dd-drawer>
 
 		<?php if($atts['note']['display_note'] && $atts['note']['note']['text']): ?>
-			<header>
+			<div class="dropdown__note">
 				<i class="material-icons">info</i> <?php echo $atts['note']['note']['text'] ?>
-			</header>
+			</div>
 		<?php endif ?>
 
 		<ul>
