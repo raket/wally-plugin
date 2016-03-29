@@ -12,10 +12,10 @@
 			</div>
 		<?php endif ?>
 
-		<ul>
+		<ul class="dropdown__list">
 			<?php foreach($atts['alternatives'] as $alternative): ?>
 			<li data-value="<?php echo $alternative['value'] ?>">
-				<button type="button" data-value="<?php echo $alternative['value'] ?>">
+				<button type="button" class="button" data-value="<?php echo $alternative['value'] ?>">
 					<?php echo $alternative['label'] ?>
 				</button>
 			</li>

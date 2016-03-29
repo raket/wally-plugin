@@ -44,6 +44,7 @@ $options = array(
 				'type'  => 'addable-box',
 				'label' => __('Alternatives', 'fw'),
 				'desc'  => __('Add alternatives to the button', 'fw'),
+				'template' => '{{=label}}',
 				'box-options' => array(
 						'value' => array(
 								'type' => 'text' ,
@@ -56,7 +57,6 @@ $options = array(
 								'desc'  => __('The alternatives name, that should be visible to the user.')
 						),
 				),
-				'template' => '{{- label }}',
 				'limit' => 0,
 		)
 );
