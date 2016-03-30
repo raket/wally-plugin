@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Wally\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-10 16:11+0100\n"
-"PO-Revision-Date: 2016-03-23 11:17+0100\n"
+"PO-Revision-Date: 2016-03-30 10:34+0200\n"
 "Last-Translator: raket <daniel@raket.nu>\n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -1828,15 +1828,15 @@ msgstr ""
 #: /lib/unyson/framework/extensions/breadcrumbs/includes/class-breadcrumbs-
 #: builder.php:10
 msgid "Blog"
-msgstr ""
+msgstr "Blogg"
 
 #: /lib/unyson/framework/extensions/blog/class-fw-extension-blog.php:38
 msgid "Add blog post"
-msgstr ""
+msgstr "Skapa inlägg"
 
 #: /lib/unyson/framework/extensions/blog/class-fw-extension-blog.php:39
 msgid "Add new blog post"
-msgstr ""
+msgstr "Skapa nytt inlägg"
 
 #: /lib/unyson/framework/extensions/blog/class-fw-extension-blog.php:40
 msgid "All blog posts"
@@ -1853,7 +1853,7 @@ msgstr "Inlägg"
 
 #: /lib/unyson/framework/extensions/blog/class-fw-extension-blog.php:44
 msgid "New blog post"
-msgstr ""
+msgstr "Nytt inlägg"
 
 #: /lib/unyson/framework/extensions/blog/class-fw-extension-blog.php:45
 msgid "No blog posts found"
@@ -1869,7 +1869,7 @@ msgstr "Sök blogginlägg"
 
 #: /lib/unyson/framework/extensions/blog/class-fw-extension-blog.php:48
 msgid "View blog post"
-msgstr ""
+msgstr "Visa blogginlägg"
 
 #: /lib/unyson/framework/extensions/blog/class-fw-extension-blog.php:67
 #: /lib/unyson/framework/extensions/blog/class-fw-extension-blog.php:87
@@ -1887,44 +1887,44 @@ msgstr "Bloggkategorier"
 #: builder.php:9 /lib/unyson/framework/extensions/seo/extensions/seo-titles-
 #: metas/includes/fw-title-meta-options.php:26
 msgid "Homepage"
-msgstr ""
+msgstr "Startsida"
 
 #: /lib/unyson/framework/extensions/breadcrumbs/settings-options.php:8
 #: /lib/unyson/framework/extensions/seo/extensions/seo-titles-metas/includes/fw-
 #: title-meta-options.php:262
 msgid "404 Not Found"
-msgstr ""
+msgstr "404 Sidan hittades inte"
 
 #: /lib/unyson/framework/extensions/breadcrumbs/settings-options.php:17
 msgid "Text for Homepage"
-msgstr ""
+msgstr "Text för startsida"
 
 #: /lib/unyson/framework/extensions/breadcrumbs/settings-options.php:18
 msgid "The homepage anchor will have this text"
-msgstr ""
+msgstr "Länken för startsidan kommer att ha denna texten"
 
 #: /lib/unyson/framework/extensions/breadcrumbs/settings-options.php:23
 msgid "Text for Blog Page"
-msgstr ""
+msgstr "Text för inläggssida"
 
 #: /lib/unyson/framework/extensions/breadcrumbs/settings-options.php:24
 msgid ""
 "The blog page anchor will have this text. In case homepage will be set as "
 "blog page, will be taken the homepage text"
-msgstr ""
+msgstr "Länken för inläggssidan kommer att ha denna texten"
 
 #: /lib/unyson/framework/extensions/breadcrumbs/settings-options.php:29
 msgid "Text for 404 Page"
-msgstr ""
+msgstr "Text för 404-sida"
 
 #: /lib/unyson/framework/extensions/breadcrumbs/settings-options.php:30
 msgid "The 404 anchor will have this text"
-msgstr ""
+msgstr "Länken för 404-sidan kommer att ha denna texten"
 
 #: /lib/unyson/framework/extensions/breadcrumbs/includes/class-breadcrumbs-
 #: builder.php:11
 msgid "404 Not found"
-msgstr ""
+msgstr "404 Sidan hittades inte"
 
 #: /lib/unyson/framework/extensions/breadcrumbs/includes/class-breadcrumbs-
 #: builder.php:124
@@ -2230,7 +2230,7 @@ msgstr "Etikett"
 #: builder/items/textarea/class-fw-option-type-form-builder-item-textarea.php:53
 #: builder/items/website/class-fw-option-type-form-builder-item-website.php:51
 msgid "Toggle mandatory field"
-msgstr ""
+msgstr "Gör fältet obligatoriskt"
 
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/checkboxes/class-fw-option-type-form-builder-item-checkboxes.php:
@@ -2243,7 +2243,7 @@ msgstr ""
 #: builder/items/textarea/class-fw-option-type-form-builder-item-textarea.php:51
 #: builder/items/website/class-fw-option-type-form-builder-item-website.php:53
 msgid "Delete"
-msgstr ""
+msgstr "Ta bort"
 
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/checkboxes/class-fw-option-type-form-builder-item-checkboxes.php:
@@ -2262,13 +2262,13 @@ msgstr "Redigera etikett"
 #: builder/items/checkboxes/class-fw-option-type-form-builder-item-checkboxes.php:
 #: 56 builder/items/radio/class-fw-option-type-form-builder-item-radio.php:56
 msgid "{x} More"
-msgstr ""
+msgstr "{x} Mer"
 
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/checkboxes/class-fw-option-type-form-builder-item-checkboxes.php:
 #: 57 builder/items/radio/class-fw-option-type-form-builder-item-radio.php:57
 msgid "Close"
-msgstr ""
+msgstr "Stäng"
 
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/checkboxes/class-fw-option-type-form-builder-item-checkboxes.php:
@@ -2369,7 +2369,7 @@ msgstr "Tre kolumner"
 #: builder/items/checkboxes/class-fw-option-type-form-builder-item-checkboxes.php:
 #: 130 builder/items/radio/class-fw-option-type-form-builder-item-radio.php:130
 msgid "Side by side"
-msgstr ""
+msgstr "Sida vid sida"
 
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/checkboxes/class-fw-option-type-form-builder-item-checkboxes.php:
@@ -2411,7 +2411,7 @@ msgstr "{label} måste fyllas i"
 #: builder/items/checkboxes/class-fw-option-type-form-builder-item-checkboxes.php:
 #: 249
 msgid "{label}: Submitted data contains not existing choices"
-msgstr ""
+msgstr "{label}: Datan innehåller val som inte existerar"
 
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/email/class-fw-option-type-form-builder-item-email.php:18
@@ -2631,14 +2631,14 @@ msgstr "{label}: Datan som skickades innehöll inga värden"
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/recaptcha/class-fw-option-type-form-builder-item-recaptcha.php:24
 msgid "Add a Recaptcha field"
-msgstr "Lägg till ett ReCaptchafält"
+msgstr "Lägg till ett Recaptchafält"
 
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/recaptcha/class-fw-option-type-form-builder-item-recaptcha.php:
 #: 26 54
 #: builder/items/recaptcha/class-fw-option-type-form-builder-item-recaptcha.php:78
 msgid "Recaptcha"
-msgstr ""
+msgstr "Recaptcha"
 
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/recaptcha/class-fw-option-type-form-builder-item-recaptcha.php:59
@@ -2653,17 +2653,17 @@ msgstr "Ställ in hemlig nyckel"
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/recaptcha/class-fw-option-type-form-builder-item-recaptcha.php:133
 msgid "Security Code"
-msgstr ""
+msgstr "Säkerhetskod"
 
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/recaptcha/class-fw-option-type-form-builder-item-recaptcha.php:147
 msgid "Could not validate the form"
-msgstr ""
+msgstr "Kunde inte validera formuläret"
 
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/recaptcha/class-fw-option-type-form-builder-item-recaptcha.php:148
 msgid "Please fill the recaptcha"
-msgstr ""
+msgstr "Var god fyll i Recaptcha"
 
 #: /lib/unyson/framework/extensions/forms/includes/option-types/form-
 #: builder/items/recaptcha/includes/option-type-recaptcha/class-fw-option-type-
@@ -2819,34 +2819,34 @@ msgstr "{label}-fältet måste innehålla en giltig hemsideadress (URL)"
 
 #: /lib/unyson/framework/extensions/forms/views/backend/submit-box-add.php:9
 msgid "Note that the type can't be changed later."
-msgstr ""
+msgstr "Notera att formulärtypen inte kan ändras senare."
 
 #: /lib/unyson/framework/extensions/forms/views/backend/submit-box-add.php:11
 msgid ""
 "You will need to create a new form in order to have a different form type."
-msgstr ""
+msgstr "Du måste skapa ett nytt formulär för att kunna byta formulärtyp."
 
 #: /lib/unyson/framework/extensions/forms/views/backend/submit-box-add.php:20
 #: /lib/unyson/framework/extensions/forms/views/backend/submit-box-edit.php:16
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Ta bort permanent"
 
 #: /lib/unyson/framework/extensions/forms/views/backend/submit-box-add.php:22
 #: /lib/unyson/framework/extensions/forms/views/backend/submit-box-edit.php:18
 msgid "Move to Trash"
-msgstr ""
+msgstr "Flytta till papperskorgen"
 
 #: /lib/unyson/framework/extensions/forms/views/backend/submit-box-add.php:32
 msgid "Publish"
-msgstr ""
+msgstr "Publicera"
 
 #: /lib/unyson/framework/extensions/forms/views/backend/submit-box-add.php:33
 msgid "Create"
-msgstr ""
+msgstr "Skapa"
 
 #: /lib/unyson/framework/extensions/mailer/class-fw-extension-mailer.php:48
 msgid "Invalid send method"
-msgstr ""
+msgstr "Felaktig send-metod"
 
 #: /lib/unyson/framework/extensions/mailer/class-fw-extension-mailer.php:81
 msgid "The message has been successfully sent!"
@@ -2854,20 +2854,20 @@ msgstr "Meddelandet har skickats!"
 
 #: /lib/unyson/framework/extensions/mailer/includes/class-mailer-sender.php:27
 msgid "Invalid email configuration"
-msgstr ""
+msgstr "Felaktigt konfigurerad e-post"
 
 #: /lib/unyson/framework/extensions/mailer/includes/class-mailer-sender.php:145
 #: /lib/unyson/framework/extensions/mailer/includes/class-mailer-sender.php:161
 msgid "Email sent"
-msgstr ""
+msgstr "E-post skickad"
 
 #: /lib/unyson/framework/extensions/mailer/includes/class-mailer-sender.php:146
 msgid "Could not send via smtp"
-msgstr ""
+msgstr "Kunde inte skicka via SMTP"
 
 #: /lib/unyson/framework/extensions/mailer/includes/class-mailer-sender.php:162
 msgid "Could not send via wp_mail"
-msgstr ""
+msgstr "Kunde inte skicka via wp_mail-metoden"
 
 #: /lib/unyson/framework/extensions/mailer/includes/option-type-mailer/class-fw-
 #: option-type-mailer.php:68
@@ -2963,68 +2963,68 @@ msgstr "Lösenordet får inte vara tomt"
 #: /lib/unyson/framework/extensions/mailer/includes/send-methods/class-fw-ext-
 #: mailer-send-method-smtp.php:96
 msgid "Invalid host"
-msgstr ""
+msgstr "Felaktig värd"
 
 #: /lib/unyson/framework/extensions/mailer/includes/send-methods/class-fw-ext-
 #: mailer-send-method-smtp.php:176 mailer-send-method-wpmail.php:56
 msgid "Could not send the email"
-msgstr ""
+msgstr "Kunde inte skicka e-post"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:89
 msgid "Site name"
-msgstr ""
+msgstr "Webbplatsens namn"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:95
 msgid "Site description"
-msgstr ""
+msgstr "Webbplatsens beskrivning"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:101
 msgid "Current time"
-msgstr ""
+msgstr "Tid"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:107
 msgid "Current date"
-msgstr ""
+msgstr "Datum"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:113
 msgid "Current month"
-msgstr ""
+msgstr "Månad"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:119
 msgid "Current year"
-msgstr ""
+msgstr "År"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:125
 msgid "Date of the post/page"
-msgstr ""
+msgstr "Inläggets datum"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:131
 msgid "Title of the post/page/term"
-msgstr ""
+msgstr "Inläggets titel"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:137
 msgid "Excerpt of the current post, of auto-generate if it is not set"
-msgstr ""
+msgstr "Utdrag från inlägget (lämna tomt för att auto-generera)"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:143
 msgid "Excerpt of the current post, without auto-generation"
-msgstr ""
+msgstr "Utdrag från inlägget (utan auto-genrering)"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:149
 msgid "Post tags, separated by coma"
-msgstr ""
+msgstr "Taggar (kommaseparerade)"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:155
 msgid "Post categories, separated by coma"
-msgstr ""
+msgstr "Kategorier (kommaseparerade)"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:161
 msgid "Category/tag/term description"
-msgstr ""
+msgstr "Beskrivning för kategori/tagg"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:167
 msgid "Term title"
-msgstr ""
+msgstr "Term-titel"
 
 #: /lib/unyson/framework/extensions/seo/class-fw-extension-seo.php:173
 msgid "Post modified time"
@@ -3057,7 +3057,7 @@ msgstr ""
 
 #: /lib/unyson/framework/extensions/seo/settings-options.php:17
 msgid "General"
-msgstr ""
+msgstr "Generellt"
 
 #: /lib/unyson/framework/extensions/seo/settings-options.php:21
 msgid "General Settings"
@@ -3086,12 +3086,12 @@ msgstr ""
 #: /lib/unyson/framework/extensions/seo/extensions/seo-sitemap/includes/fw-
 #: sitemap-options.php:57
 msgid "Sitemap"
-msgstr ""
+msgstr "Webbplatskarta"
 
 #: /lib/unyson/framework/extensions/seo/extensions/seo-sitemap/includes/fw-
 #: sitemap-options.php:68
 msgid "View Sitemap"
-msgstr ""
+msgstr "Visa webbplatskarta"
 
 #: /lib/unyson/framework/extensions/seo/extensions/seo-sitemap/includes/fw-
 #: sitemap-options.php:69
@@ -3101,12 +3101,12 @@ msgstr ""
 #: /lib/unyson/framework/extensions/seo/extensions/seo-sitemap/includes/fw-
 #: sitemap-options.php:71
 msgid "XML Sitemap"
-msgstr ""
+msgstr "XML-webbplatskarta"
 
 #: /lib/unyson/framework/extensions/seo/extensions/seo-sitemap/includes/fw-
 #: sitemap-options.php:81
 msgid "Search Engines"
-msgstr ""
+msgstr "Sökmotorer"
 
 #: /lib/unyson/framework/extensions/seo/extensions/seo-sitemap/includes/fw-
 #: sitemap-options.php:83
@@ -5091,13 +5091,13 @@ msgstr "Lägg till bilder"
 #: /lib/unyson/framework/includes/option-types/multi-upload/class-fw-option-type-
 #: multi-upload.php:188
 msgid "1 File"
-msgstr ""
+msgstr "1 fil"
 
 #: /lib/unyson/framework/includes/option-types/multi-upload/class-fw-option-type-
 #: multi-upload.php:189
 #, php-format
 msgid "%u Files"
-msgstr ""
+msgstr "%u filer"
 
 #: /lib/unyson/framework/includes/option-types/multi-upload/views/images-only.php:
 #: 14
@@ -5105,7 +5105,7 @@ msgstr ""
 #: php:35 /lib/unyson/framework/includes/option-types/upload/views/images-only.
 #: php:13 php:30
 msgid "No image"
-msgstr ""
+msgstr "Ingen bild"
 
 #: /lib/unyson/framework/includes/option-types/radio-text/class-fw-option-type-
 #: radio-text.php:22
@@ -5124,7 +5124,7 @@ msgstr ""
 
 #: /lib/unyson/framework/includes/option-types/typography-v2/view.php:39
 msgid "Font face"
-msgstr ""
+msgstr "Typsnitt"
 
 #: /lib/unyson/framework/includes/option-types/typography-v2/view.php:48
 msgid "Normal"
@@ -5132,36 +5132,36 @@ msgstr ""
 
 #: /lib/unyson/framework/includes/option-types/typography-v2/view.php:49
 msgid "Italic"
-msgstr ""
+msgstr "Kursiv"
 
 #: /lib/unyson/framework/includes/option-types/typography-v2/view.php:50
 msgid "Oblique"
-msgstr ""
+msgstr "Fet-kursiv"
 
 #: /lib/unyson/framework/includes/option-types/typography-v2/view.php:59
 #: /lib/unyson/framework/includes/option-types/typography-v2/view.php:118
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: /lib/unyson/framework/includes/option-types/typography-v2/view.php:85
 msgid "Weight"
-msgstr ""
+msgstr "Vikt"
 
 #: /lib/unyson/framework/includes/option-types/typography-v2/view.php:101
 msgid "Script"
-msgstr ""
+msgstr "Skript"
 
 #: /lib/unyson/framework/includes/option-types/typography-v2/view.php:139
 msgid "Line height"
-msgstr ""
+msgstr "Radavstånd"
 
 #: /lib/unyson/framework/includes/option-types/typography-v2/view.php:150
 msgid "Letter spacing"
-msgstr ""
+msgstr "Spärrning"
 
 #: /lib/unyson/framework/includes/option-types/typography-v2/view.php:173
 msgid "Color"
-msgstr ""
+msgstr "Färg"
 
 #: /lib/unyson/framework/includes/option-types/upload/class-fw-option-type-upload.
 #: php:150
@@ -5170,7 +5170,7 @@ msgstr "Lägg till bild"
 
 #: /lib/unyson/framework/views/backend-settings-form.php:48
 msgid "Save Changes"
-msgstr ""
+msgstr "Spara ändringar"
 
 #: /lib/unyson/framework/views/backend-settings-form.php:49
 msgid "Reset Options"
@@ -5178,7 +5178,7 @@ msgstr "Återställ alternativ"
 
 #: /lib/unyson/framework/views/backend-settings-form.php:63
 msgid "by"
-msgstr ""
+msgstr "av"
 
 #: /lib/unyson/framework/views/backend-settings-form.php:185
 msgid ""
