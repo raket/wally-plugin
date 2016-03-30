@@ -24,16 +24,8 @@ $options = array(
 			'h6' => 'H6',
 		)
 	),
-	'centered' => array(
-		'type'    => 'switch',
-		'label'   => __('Centered', 'fw'),
-//		'left-choice' => array(
-//			'value' => 'no',
-//			'label' => __('No', 'fw'),
-//		),
-//		'right-choice' => array(
-//			'value' => 'yes',
-//			'label' => __('Yes', 'fw'),
-//		),
-	)
+//	'centered' => array(
+//		'type'    => 'switch',
+//		'label'   => __('Centered', 'fw')
+//	)
 );
