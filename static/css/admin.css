@@ -109,7 +109,7 @@ input[type="radio"]:checked + label:hover {
 .wally-easy-mode-visible #mceu_16, /* tooltip */
 .wally-easy-mode-visible #mceu_17, /* Editor shortcodes*/
 .wally-easy-mode-visible .wp-editor-tabs,
-.wally-easy-mode-visible .postbox:not(#wally_editor_mode):not(#submitdiv):not(#wally_editor_shortcuts):not(#postimagediv) {
+.wally-easy-mode-visible .postbox:not(#wally_editor_mode):not(#submitdiv):not(#wally_editor_shortcuts):not(#postimagediv):not(#pageparentdiv) {
     display: none !important;
 }
 .wally-easy-mode-visible #wp-content-wrap .mce-toolbar .mce-btn i:not(.mce-caret) {
