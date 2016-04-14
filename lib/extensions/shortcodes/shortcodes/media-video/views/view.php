@@ -10,6 +10,7 @@ global $wp_embed;
 
 $width  = ( is_numeric( $atts['width'] ) && ( $atts['width'] > 0 ) ) ? $atts['width'] : '300';
 $height = ( is_numeric( $atts['height'] ) && ( $atts['height'] > 0 ) ) ? $atts['height'] : '200';
+$title = $atts['title'];
 
 ?>
 <div class="video-wrapper shortcode-container">
@@ -20,10 +21,14 @@ $height = ( is_numeric( $atts['height'] ) && ( $atts['height'] > 0 ) ) ? $atts['
 		'width' => $width,
 		'height' => $height
 	));
-	echo $iframe;
+	if(!empty($title)) {
+		echo w_add_title_to_video($title, $iframe);
+	} else {
+		echo $iframe;
+	}
 } else {
 	$url = $atts['video']['url']['video'];
 	$iframe = $wp_embed->run_shortcode( '[embed  width="' . $width . '" height="' . $height . '"]' . $url . '[/embed]');
-	echo do_shortcode( $iframe );
+	echo w_add_title_to_video($title, do_shortcode( $iframe ));
 } ?>
 </div>

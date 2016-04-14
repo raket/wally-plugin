@@ -40,6 +40,10 @@ $options = array(
 				),
 				'show_borders' => false,
 		),
+		'title' => array(
+			'type'  => 'text',
+			'label' => __( 'Title', 'fw' )
+		),
 		'width'  => array(
 				'type'  => 'text',
 				'label' => __( 'Video Width', 'fw' ),
