@@ -91,7 +91,7 @@ class Wally_Welcome
 					</figure>
 					<h3 class="dashboard__box__h2">Manual för redaktörer</h3>
 					<p class="dashboard__box__p">Läs manualen för redaktörer som vill lära sig mer om hur man jobbar med innehållet i Wally</p>
-					<a href="http://www.wally-wp.se/manual/redaktorsmanual">Redaktörsmanual</a>
+					<a href="http://www.wally-wp.se/manual/redaktorsmanual" target="_blank">Redaktörsmanual</a>
 				</article>
 				<article class="dashboard__welcome__boxes__box">
 					<figure class="dashboard__box__figure">
@@ -99,7 +99,7 @@ class Wally_Welcome
 					</figure>
 					<h3 class="dashboard__box__h2">Information för utvecklare</h3>
 					<p class="dashboard__box__p">Läs mer information för utvecklare som vill bygga vidare på Wally-temat</p>
-					<a href="http://www.wally-wp.se/manual/utvecklare">Utvecklarinformation</a>
+					<a href="http://www.wally-wp.se/manual/utvecklare" target="_blank">Utvecklarinformation</a>
 				</article>
 			</section>
 		</div>
