@@ -1,0 +1,565 @@
+/*.wp-media-buttons a.button.button-primary { display:none; }*/
+
+*:focus:not(div) {
+    outline: solid 2px #0A6FAF !important;
+    /*color: #0A6FAF !important;*/
+    /*background-color: #B3E5FC !important;*/
+}
+
+a:focus {
+    border: 2px solid #0A6FAF !important;
+}
+
+input:focus:not([type="submit"]),
+textarea:focus,
+select:focus,
+option:focus {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+
+/* For menu icon */
+#toplevel_page_wally_settings .wp-menu-image.dashicons-before img {
+    height: 16px;
+}
+
+/**********************************************
+*   Editor modes
+**********************************************/
+
+/* Change the meta box color */
+#wally_editor_mode.postbox {
+    background-color: #E7F7FF;
+    border-color: #B5CCE0;
+}
+
+/* Button wrappers */
+#wally_editor_mode table {
+    border: none;
+    border-spacing: 0;
+    width: 100%;
+}
+#wally_editor_mode tr {
+    border-spacing: 0;
+}
+#wally_editor_mode td {
+    text-align: center;
+    padding: 0;
+    border: none;
+}
+
+/* Hide radios */
+#wally_editor_mode input {
+    display: none;
+    position: fixed;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Buttons */
+#wally_editor_mode label.button {
+    border-radius: 0;
+}
+#wally_editor_mode td:last-child label.button {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 0;
+}
+#wally_editor_mode td:first-child label.button {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-right: 0;
+}
+#wally_editor_mode label.button {
+    width: 100%;
+}
+
+.wrap .add-new-h2,
+.wrap .add-new-h2:active,
+.wrap .page-title-action,
+.wrap .page-title-action:active,
+.wp-core-ui .button-primary {
+    background: #007DAA;
+    border-color: #174154;
+    font-weight: bold;
+    color:#fff;
+}
+
+
+/* Button active state */
+input[type="radio"]:checked + label,
+input[type="radio"]:checked + label:hover {
+    background: #0073aa;
+    border-color: #005082;
+    color: rgba(255,255,255,.95);
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
+    vertical-align: top;
+}
+
+/* Easy editor mode css overrides */
+.wally-easy-mode-visible #mceu_2, /* Italic */
+.wally-easy-mode-visible #mceu_7, /* hr */
+.wally-easy-mode-visible #mceu_12, /* remove link */
+.wally-easy-mode-visible #mceu_13, /* read more */
+.wally-easy-mode-visible #mceu_15, /* toolbar toggle */
+.wally-easy-mode-visible #mceu_16, /* tooltip */
+.wally-easy-mode-visible #mceu_17, /* Editor shortcodes*/
+.wally-easy-mode-visible .wp-editor-tabs,
+.wally-easy-mode-visible .postbox:not(#wally_editor_mode):not(#submitdiv):not(#wally_editor_shortcuts):not(#postimagediv) {
+    display: none !important;
+}
+.wally-easy-mode-visible #wp-content-wrap .mce-toolbar .mce-btn i:not(.mce-caret) {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+}
+.wally-easy-mode-visible .mce-ico.mce-i-fw-button-icon:before {
+    font-size: 20px;
+}
+.wally-easy-mode-visible .mce-listbox.mce-widget.mce-btn.mce-menubtn.mce-fixed-width.mce-listbox.mce-first {
+    padding: 6px 4px;
+    margin: 6px 4px;
+    width: 180px;
+}
+.wally-easy-mode-visible .mce-listbox.mce-widget.mce-btn.mce-menubtn.mce-fixed-width.mce-listbox.mce-first button {
+    width: 100%;
+}
+
+
+.wally-advanced-mode-visible #wally_editor_shortcuts {
+    display: none !important;
+}
+
+/**********************************************
+*   Editor shortcuts
+**********************************************/
+
+.wally-shortcut-table {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    border-left: 3px solid rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+.wally-editor-shortcuts .tip {
+    font-size: 11px;
+    opacity: 0.75;
+    padding-left: 10px;
+}
+
+.wally-shortcut-table td {
+    padding: 2px;
+}
+
+.wally-shortcut-table tr:first-child th {
+    padding-bottom: 3px;
+}
+
+.wally-editor-shortcuts h4 span {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.wally-shortcut-table td:first-child {
+    white-space: nowrap;
+}
+
+.wally-editor-shortcuts kbd {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 10px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    min-width: 12px;
+    min-height: 12px;
+    cursor: default;
+    display: inline-block;
+}
+
+/**********************************************
+*   File uploads
+**********************************************/
+
+.attachment-details [data-setting] {
+    margin-bottom: 1rem;
+}
+
+[data-setting='alt']:before {
+    float: right;
+    display: block;
+    content: 'Alternativtext, läses av hjälpmedel';
+    font-weight: bold;
+    width: 65%;
+    padding-top: 8px;
+}
+
+[data-setting='url']:before {
+    float: right;
+    display: block;
+    content: 'Filadress till uppladdad media';
+    font-weight: bold;
+    width: 65%;
+    padding-top: 8px;
+}
+
+[data-setting='title']:before {
+    float: right;
+    display: block;
+    content: 'Bildens titel';
+    font-weight: bold;
+    width: 65%;
+    padding-top: 8px;
+}
+
+[data-setting='caption']:before {
+    float: right;
+    display: block;
+    content: 'Bildtext, visas i anslutning till bilden';
+    font-weight: bold;
+    width: 65%;
+    padding-top: 8px;
+}
+
+[data-setting='description']:before {
+    float: right;
+    display: block;
+    content: 'Beskrivning för mediabiblioteket och bilaga';
+    font-weight: bold;
+    width: 65%;
+    padding-top: 8px;
+}
+
+
+/**********************************************
+*   Confirm dialog
+**********************************************/
+
+#confirm-dialog {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    max-width: 50rem;
+    z-index: 9999;
+    border-radius: 4px;
+    background: #FFF;
+    padding: 2rem;
+    text-align: center;
+    border: solid 1px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+#confirm-dialog-overlay {
+     content: '';
+     position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(20,20,20, 0.6);
+    z-index: 9998;
+}
+
+#confirm-dialog h2 {
+    line-height: 1.3;
+}
+
+#confirm-dialog .button {
+    height: 40px;
+    margin: 1rem 2rem 1rem 0;
+    padding: 0 20px 2px;
+}
+
+/**********************************************
+*   Unyson
+**********************************************/
+.fw-backend-option-design-default > .fw-backend-option-desc {
+    font-style: normal !important;
+}
+
+.fw-modal.fw-modal-small > .media-modal {
+    max-height: 80vh;
+    max-width: 80%;
+}
+.fw-backend-option-design-default > .fw-backend-option-input.width-type-fixed > .fw-inner, .fw-backend-option-design-customizer > .fw-backend-option-input.width-type-fixed > .fw-inner, .fw-backend-option-design-taxonomy > td > .fw-backend-option-input.width-type-fixed > .fw-inner, .fw-backend-option-fixed-width {
+    max-width:100%;
+}
+
+/**********************************************
+*   Wally WP Screens
+    Wally Color: #5564D7
+**********************************************/
+[class*="wally_page"] #wpwrap {
+    background: #F5F8F9;
+    @extend .dashboard__wally;
+}
+
+[class*="wally_page"] #wpcontent {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+[class*="wally_page"] #wpcontent .updated {
+    display: none;
+}
+
+
+
+$wally-color: #5564D7;
+$primary: $wally-color;
+$ghost-black: rgba(0,0,0,0.1);
+$base-padding: 1rem;
+$admin-max-width: 60rem;
+
+@import url(https://fonts.googleapis.com/css?family=Material+Icons);
+
+@mixin pad($y: 1, $x: 1) {
+    @if $x != 1 {
+        padding: $base-padding*$y $base-padding*$x;
+    } @else {
+        padding: $base-padding * $y;
+    }
+}
+
+@mixin link-underline {
+    border-bottom: 1px solid $ghost-black;
+    margin-bottom: 1px;
+    text-decoration: none;
+    padding: 2px 5px 2px 0px;
+    &:hover, &:focus {
+        border-bottom: solid 2px $primary;
+        text-decoration: none;
+        margin-bottom: 0px;
+    }
+    &:focus {
+        border-bottom: none;
+    }
+}
+
+@mixin link-arrow {
+    font-family: 'Material Icons';
+    content: '\E5C8';
+    font-size: inherit;
+    color: inherit;
+    position: relative;
+    top: 0.1rem;
+    left: 0.2rem;
+}
+
+@mixin link-arrow-before {
+    position: relative;
+    &:before {
+        @include link-arrow;
+        left: 0;
+        margin-right: 0.2rem;
+    }
+}
+
+@mixin link-arrow-after {
+    position: relative;
+    &:after {
+        @include link-arrow;
+    }
+}
+
+.wally__byline {
+    padding: 0 0 1rem 2.5rem;
+    position: relative;
+    display: block;
+    a {
+        color: $wally-color;
+    }
+    img {
+        position: absolute;
+        left: 0;
+        top: 0.5rem;
+        transform: translateY(-50%);
+        width: 2rem;
+        height: auto;
+    }
+}
+
+.dashboard__wally {
+    .wrap {
+        max-width: $admin-max-width;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    h1 {
+        margin: 0 0 $base-padding*2 0;
+        @extend .dashboard__h1;
+    }
+    h2 {
+        @extend .dashboard__box__h2;
+    }
+    a:focus, textarea:focus, input:focus {
+        outline: 2px solid $primary !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+    textarea, input {
+        padding: $base-padding;
+    }
+    .box {
+        border-radius: 5px;
+        box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.27);
+        padding: 0.1rem 1rem;
+        margin: 1rem 0;
+        background: #FFFFFF;
+        display: block;
+        box-sizing: border-box;
+    }
+    input.button.button-primary {
+        background: $wally-color;
+        padding: 0.75rem 1rem 2.25rem;
+        text-shadow: none;
+        font-size: 1rem;
+        border: 0px $wally-color solid;
+        &:hover, &:focus {
+            background: lighten($wally-color, 2%);
+        }
+    }
+    .form-table {
+        @extend .box;
+        margin: $base-padding*2 0 $base-padding*3;
+        padding: 0;
+        tr {
+            border-bottom: solid 1px $ghost-black;
+            td, th {
+                @include pad();
+                input {
+                    width: 100%;
+                }
+            }
+            td {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.dashboard__box__p {
+    font-size: 1rem;
+}
+
+.dashboard__h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    color: $wally-color;
+    margin: $base-padding/2 0 $base-padding;
+    line-height: 1.2;
+}
+
+.dashboard__h2 {
+    font-weight: normal;
+    color: $wally-color;
+    margin: $base-padding/2 0 $base-padding/2;
+    line-height: 1.2;
+}
+
+.dashboard__welcome {
+    @extend .dashboard__wally;
+    max-width: $admin-max-width;
+    a {
+        color: $wally-color;
+        @include link-underline;
+        @include link-arrow-after;
+    }
+}
+
+.dashboard__welcome__intro {
+
+}
+
+.dashboard__box {
+    display: block;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.27);
+    @include pad();
+    transition: opacity 0.2s ease;
+}
+
+.dashboard__welcome__boxes {
+    display: flex;
+    @include pad(2, 0);
+    &:hover {
+        .dashboard__welcome__boxes__box {
+            opacity: 0.8;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        flex: 1 !important;
+        flex-wrap: wrap;
+        .dashboard__welcome__boxes__box {
+            width: 100% !important;
+            margin: $base-padding*2 0 0 0;
+        }
+    }
+}
+
+.dashboard__welcome__boxes--3cols {
+    @extend .dashboard__welcome__boxes;
+    flex: 3;
+    .dashboard__welcome__boxes__box {
+        width: 33%;
+    }
+}
+
+.dashboard__welcome__boxes--2cols {
+    @extend .dashboard__welcome__boxes;
+    flex: 2;
+    .dashboard__welcome__boxes__box {
+        width: 50%;
+    }
+}
+
+.dashboard__box__figure {
+    height: 12rem;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        height: 80%;
+        width: auto;
+        max-width: 80%;
+    }
+}
+
+.dashboard__hr {
+    border-top: solid 1px $ghost-black;
+    padding: $base-padding 0;
+    margin-top: $base-padding*3;
+}
+
+.dashboard__welcome__boxes__box {
+    @extend .dashboard__box;
+    margin-left: 2rem;
+    &:first-child {
+        margin: 0;
+    }
+}
+
+
+.dashboard__box__h2 {
+    @extend .dashboard__h2;
+}

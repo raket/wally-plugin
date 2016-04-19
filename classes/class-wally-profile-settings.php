@@ -40,7 +40,7 @@ class Wally_Profile_Settings
 		?>
 
 		<h3><?php _e('Tillgänglighet', 'fw') ?></h3>
-
+		<a name="user-editor-mode"></a>
 		<table class="form-table">
 			<tr>
 				<th><label for="wally_editor_mode"><?php _e('Redigerarläge', 'fw') ?></label></th>

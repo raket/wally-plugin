@@ -45,7 +45,7 @@ class Wally_Social_media
 		$this->options = get_option('wally_settings_social_media');
 		?>
 		<div class="wrap">
-			<h2>Temainställningar</h2>
+			<h1>Temainställningar</h1>
 			<form method="post" action="options.php">
 				<?php
 				settings_fields('wally_settings_social_media');

@@ -51,6 +51,12 @@ $options = array(
 				'label' => __( 'Video Height', 'fw' ),
 				'desc'  => __( 'Enter a value for the height', 'fw' ),
 				'value' => 200
+		),
+		'title' => array(
+			'type'  => 'text',
+			'label' => __( 'Video Iframe Title', 'fw' ),
+			'desc'  => __( 'Enter a title for the video element. Will be appended as a title parameter on the embedded video element.', 'fw' ),
+			'value' => ''
 		)
 );
 

@@ -46,7 +46,7 @@ class Wally_Contact_Details
 
 		?>
 		<div class="wrap">
-			<h2>Temainställningar</h2>
+			<h1>Temainställningar</h1>
 			<form method="post" action="options.php">
 				<?php
 				settings_fields('wally_settings_contact_details');

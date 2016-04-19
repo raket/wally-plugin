@@ -58,7 +58,7 @@ class Wally {
 		$this->_localize();
 
 		$this->plugindir = plugin_dir_path(__DIR__);
-		$this->pluginurl = trailingslashit(plugins_url('wally'));
+		$this->pluginurl = trailingslashit(plugins_url('wally-plugin'));
 
 	}
 
