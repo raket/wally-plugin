@@ -43,7 +43,10 @@ class Articles_Widget extends WP_Widget {
 			);
 			foreach($articles as $article): ?>
 				<?php //var_dump($article) ?>
-				<?php $thumbnail_small = wp_get_attachment_image_src(get_post_thumbnail_id($article->ID), 'thumbnail')[0]; ?>
+				<?php
+				$thumbnails = wp_get_attachment_image_src(get_post_thumbnail_id($article->ID), 'thumbnail');
+				$thumbnail_small = $thumbnails[0];
+				?>
 				<article class="article-box" role="article" aria-labelledby="post-<?php $article->ID ?>">
 					<?php if(has_post_thumbnail($article->ID)): ?>
 					<div class="image thumbnail thumbnail--small" data-image="<?= $thumbnail_small; ?>" >
