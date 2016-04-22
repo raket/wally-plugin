@@ -56,11 +56,12 @@ class Raket_Admin_Mode {
 
         // Mode switcher widget
         wp_add_dashboard_widget('admin_mode_dashboard_widget', 'Administrationsläge', function(){
+            $raket_admin = new Raket_Admin_Mode();
             echo "Den här webbplatsen har många funktioner som du kanske inte kommer att använda så ofta. Den här rutan ger dig möjligheten att växla mellan två lägen, ett enkelt och ett avancerat.";
             echo "<br /><br />";
             echo "Om du inte är sidans administratör, eller inte känner dig riktigt säker i WordPress rekomenderar vi att du använder det enklare läget.";
             echo "<br /><br />";
-            echo "Du är just nu i <strong>" .$this->get_current_user_admin_mode(). " administrationsläge</strong>.";
+            echo "Du är just nu i <strong>" .$raket_admin->get_current_user_admin_mode(). " administrationsläge</strong>.";
             echo "<p align='right'><a href='?raket_switch_mode=1' alt='' title='' class='button action'>Ändra läge</a></p>";
         });
     }
