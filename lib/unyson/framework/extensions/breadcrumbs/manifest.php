@@ -10,8 +10,8 @@ $manifest['description'] = __(
 	.' This will make navigating the website much easier.',
 	'fw'
 );
-$manifest['version'] = '1.0.7';
-$manifest['display'] = false;
+$manifest['version'] = '1.0.8';
+$manifest['display'] = true;
 $manifest['standalone'] = true;
 
 $manifest['github_update'] = 'ThemeFuse/Unyson-Breadcrumbs-Extension';

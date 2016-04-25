@@ -10,3 +10,4 @@ map.xml.gz
 assets/bower/
 assets/css/
 assets/js/build/
+lib/**/*/.gitignore
