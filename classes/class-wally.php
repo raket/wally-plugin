@@ -81,6 +81,7 @@ class Wally {
 		require_once($dir . 'dashboard/class-wally-welcome.php');
 		require_once($dir . 'dashboard/class-wally-contact-details.php');
 		require_once($dir . 'dashboard/class-wally-social-media.php');
+		require_once($dir . 'dashboard/class-wally-feedback.php');
 		require_once($dir . 'dashboard/class-wally-sitemap.php');
 
 		require_once($dir . 'class-wally-editor.php');
