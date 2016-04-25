@@ -86,6 +86,7 @@ body.rtl .fw-options-tabs-wrapper > .fw-options-tabs-list ul li {
 	color: #000;
 	border-bottom: 1px solid #ccc;
 	margin-top: 0;
+	margin-bottom: -1px;
 }
 
 .fw-options-tabs-wrapper > .fw-options-tabs-list ul li a.nav-tab:hover {
@@ -242,11 +243,11 @@ form.fw-settings-form.fw-backend-side-tabs {
 
 .fw-backend-side-tabs .fw-options-tabs-first-level {
 	background:
-	#fff
-	url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAABCAYAAAAo/lyUAAAAIklEQVQ4T2N8/Pjxf4ZRMBoCoyEwGgKjITAaAqMhMKRDAACcIAOqH7nZlwAAAABJRU5ErkJgggAA') /* #e3e3e3 500x1 */
-	-302px /* 198-500 */
-	0
-	repeat-y;
+		#fff
+		url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAABCAYAAAAo/lyUAAAAIklEQVQ4T2N8/Pjxf4ZRMBoCoyEwGgKjITAaAqMhMKRDAACcIAOqH7nZlwAAAABJRU5ErkJgggAA') /* #e3e3e3 500x1 */
+		-302px /* 198-500 */
+		0
+		repeat-y;
 }
 
 .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-list {
@@ -279,6 +280,7 @@ body.rtl .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-l
 	margin-right: 0;
 	border: 1px solid #d3d3d3;
 	border-width: 0 0 1px;
+	overflow: hidden;
 }
 
 body.rtl .fw-backend-side-tabs .fw-options-tabs-wrapper > .fw-options-tabs-contents > .fw-inner > .fw-options-tab > .fw-options-tabs-wrapper > .fw-options-tabs-list {
@@ -305,14 +307,25 @@ body.rtl .fw-backend-side-tabs .fw-options-tabs-wrapper > .fw-options-tabs-list 
 	margin: 0;
 	padding: 0 10px 0 20px;
 	display: block;
-	height: 44px;
-	line-height: 44px;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	height: 43px;
+	line-height: 43px;
 	border: none;
 	font-size: 14px;
 	font-weight: 400;
 	color: #333;
 	-webkit-box-shadow: none;
 	box-shadow: none;
+}
+
+body.branch-4-0 .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-list ul li a.nav-tab,
+body.branch-4-1 .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-list ul li a.nav-tab,
+body.branch-4-2 .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-list ul li a.nav-tab,
+body.branch-4-3 .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-list ul li a.nav-tab {
+	height: 44px;
+	line-height: 44px;
 }
 
 .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-list .ui-tabs-nav a:hover {
@@ -381,8 +394,14 @@ body.rtl .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-c
 	margin-bottom: -1px;
 }
 
-.fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-contents > .fw-inner > .fw-options-tab > .fw-options-tabs-wrapper > .fw-options-tabs-list ul,
-.fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-contents > .fw-inner > .fw-options-tab > .fw-options-tabs-wrapper > .fw-options-tabs-list ul li {
+.fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-contents > .fw-inner > .fw-options-tab > .fw-options-tabs-wrapper > .fw-options-tabs-list ul {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+body.branch-4-0 .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-contents > .fw-inner > .fw-options-tab > .fw-options-tabs-wrapper > .fw-options-tabs-list ul li,
+body.branch-4-1 .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-contents > .fw-inner > .fw-options-tab > .fw-options-tabs-wrapper > .fw-options-tabs-list ul li,
+body.branch-4-2 .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-contents > .fw-inner > .fw-options-tab > .fw-options-tabs-wrapper > .fw-options-tabs-list ul li,
+body.branch-4-3 .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-contents > .fw-inner > .fw-options-tab > .fw-options-tabs-wrapper > .fw-options-tabs-list ul li {
 	border-bottom: 1px solid #e5e5e5;
 }
 
@@ -452,17 +471,24 @@ body.rtl .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-c
 	margin-bottom: 0;
 }
 
-.fw-backend-side-tabs .fw-backend-postboxes > .fw-postbox > h3 {
+.fw-backend-side-tabs .fw-backend-postboxes > .fw-postbox > .hndle {
 	position: relative;
 	padding: 0 25px;
-	height: 47px;
+	height: 46px;
 	line-height: 45px;
 	border-bottom: none !important;
 	font-size: 17px;
 	color: #0074a2;
 }
 
-.fw-backend-side-tabs .fw-backend-postboxes > .fw-postbox > h3:after {
+body.branch-4-0 .fw-backend-side-tabs .fw-backend-postboxes > .fw-postbox > .hndle,
+body.branch-4-1 .fw-backend-side-tabs .fw-backend-postboxes > .fw-postbox > .hndle,
+body.branch-4-2 .fw-backend-side-tabs .fw-backend-postboxes > .fw-postbox > .hndle,
+body.branch-4-3 .fw-backend-side-tabs .fw-backend-postboxes > .fw-postbox > .hndle {
+	height: 47px;
+}
+
+.fw-backend-side-tabs .fw-backend-postboxes > .fw-postbox > .hndle:after {
 	content: "";
 	display: block;
 	position: absolute;
@@ -473,9 +499,9 @@ body.rtl .fw-backend-side-tabs .fw-options-tabs-first-level > .fw-options-tabs-c
 	z-index: 1;
 }
 
-.fw-backend-side-tabs .fw-backend-postboxes > .fw-postbox > h3 .handlediv {
+/*.fw-backend-side-tabs .fw-backend-postboxes > .fw-postbox > .handlediv {
 	display: none;
-}
+}*/
 
 .fw-backend-side-tabs .fw-backend-postboxes > .fw-postbox > .handlediv:before {
 	top: 4px;
@@ -597,6 +623,7 @@ body.admin-color-sunrise .fw-backend-side-tabs .fw-settings-form-header { backgr
 	line-height: 1;
 	color: #fff;
 	padding: 0;
+	margin: 0;
 }
 
 .fw-backend-side-tabs .fw-settings-form-header h2 small {
@@ -628,6 +655,7 @@ body.rtl .fw-backend-side-tabs .fw-settings-form-header .form-header-buttons {
 .fw-backend-side-tabs .fw-settings-form-header .form-header-buttons input {
 	-webkit-box-shadow: none;
 	box-shadow: none;
+	text-shadow: none;
 	vertical-align: middle;
 }
 
@@ -646,10 +674,14 @@ body.rtl .fw-backend-side-tabs .fw-settings-form-header .form-header-buttons {
 	width: 1px;
 }
 
+.fw-backend-side-tabs .fw-settings-form-header .form-header-buttons > * {
+	line-height: 26px;
+	vertical-align: middle;
+}
+
 .fw-backend-side-tabs .fw-settings-form-header .form-header-buttons .submit-button-reset {
 	padding: 0;
 	height: 26px;
-	line-height: 26px;
 	color: #fff;
 	background-color: transparent;
 	border-width: 0;
@@ -698,6 +730,12 @@ body.rtl .fw-backend-side-tabs .fw-settings-form-header .form-header-buttons {
 	min-height: 70px;
 	border-top: 1px solid #e5e5e5;
 	background: #f7f7f7;
+
+	-webkit-animation: fwFadeIn 3s ease-in;
+	-moz-animation: fwFadeIn 3s ease-in;
+	-ms-animation: fwFadeIn 3s ease-in;
+	-o-animation: fwFadeIn 3s ease-in;
+	animation: fwFadeIn 3s ease-in;
 }
 
 .fw-backend-side-tabs .fw-options-tabs-wrapper + .form-footer-buttons {
@@ -766,33 +804,35 @@ form#post .fw-options-tabs-wrapper > .fw-options-tabs-contents .fw-backend-postb
 
 /* Fixes postboxes */
 
-.fw-postbox-without-name > h3.hndle,
-.fw-postbox-without-name > .handlediv {
+.fw-postbox-without-name > .hndle,
+.fw-postbox-without-name > .handlediv,
+.js .fw-postbox-without-name > .hndle,
+.js .fw-postbox-without-name > .handlediv {
 	display: none;
 }
 
-.fw-postbox h3.hndle {
+.fw-postbox .hndle {
 	cursor: pointer !important; /* to rewrite .js .postbox .hndle */
 }
 
-.fw-postbox:not(.initialized) h3.hndle {
+.fw-postbox:not(.initialized) .hndle {
 	display: none;
 }
 
-.fw-postbox h3.hndle .fw-html-before-title small:not(.dashicons),
-.fw-postbox h3.hndle .fw-html-after-title small:not(.dashicons) {
+.fw-postbox .hndle .fw-html-before-title small:not(.dashicons),
+.fw-postbox .hndle .fw-html-after-title small:not(.dashicons) {
 	font-size: medium !important;
 }
 
-.fw-postbox h3.hndle .fw-html-before-title .dashicons,
-.fw-postbox h3.hndle .fw-html-after-title .dashicons {
+.fw-postbox .hndle .fw-html-before-title .dashicons,
+.fw-postbox .hndle .fw-html-after-title .dashicons {
 	width: auto;
 	height: auto;
 	color: #AAA; /* copied from .handlediv */
 }
 
-.fw-postbox h3.hndle .fw-html-before-title .dashicons:hover,
-.fw-postbox h3.hndle .fw-html-after-title .dashicons:hover {
+.fw-postbox .hndle .fw-html-before-title .dashicons:hover,
+.fw-postbox .hndle .fw-html-after-title .dashicons:hover {
 	color: #777; /* copied from .handlediv */
 }
 
@@ -800,12 +840,12 @@ form#post .fw-options-tabs-wrapper > .fw-options-tabs-contents .fw-backend-postb
 /* begin copy from: .js .meta-box-sortables .postbox .handlediv */
 
 .fw-postbox .handlediv:before {
-	right: 12px;
+	top: 0;
+	right: 0;
+	padding: 8px 9px 8px 7px;
 	font: 400 20px/1 dashicons;
 	speak: none;
 	display: inline-block;
-	padding: 8px 10px;
-	top: 0;
 	position: relative;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -822,6 +862,10 @@ body.rtl .fw-postbox .handlediv:before {
 
 .fw-postbox.closed .handlediv:before {
 	content: '\f140';
+}
+
+.fw-postbox .toggle-indicator {
+	display: none; /* fixes https://github.com/ThemeFuse/Unyson/issues/1261 */
 }
 
 /* end copy from: .js .meta-box-sortables .postbox .handlediv */
@@ -856,8 +900,7 @@ body.rtl .fw-postbox > .inside > .fw-backend-options-last-border-hider {
 }
 
 .fw-backend-option-design-default > .fw-backend-option-input > .fw-inner,
-.fw-backend-option-design-customizer > .fw-backend-option-input > .fw-inner,
-.fw-backend-option-design-taxonomy > td > .fw-backend-option-input > .fw-inner {
+.fw-backend-option-design-customizer > .fw-backend-option-input > .fw-inner {
 	position: relative;
 	max-width: 100%;
 
@@ -868,15 +911,13 @@ body.rtl .fw-postbox > .inside > .fw-backend-options-last-border-hider {
 
 .fw-backend-option-design-default > .fw-backend-option-input.width-type-fixed > .fw-inner,
 .fw-backend-option-design-customizer > .fw-backend-option-input.width-type-fixed > .fw-inner,
-.fw-backend-option-design-taxonomy > td > .fw-backend-option-input.width-type-fixed > .fw-inner,
 .fw-backend-option-fixed-width {
 	width: 100%;
 	max-width: 428px;
 }
 
 .fw-backend-option-design-default > .fw-backend-option-input.width-type-full > .fw-inner,
-.fw-backend-option-design-customizer > .fw-backend-option-input.width-type-full > .fw-inner,
-.fw-backend-option-design-taxonomy > td > .fw-backend-option-input.width-type-full > .fw-inner {
+.fw-backend-option-design-customizer > .fw-backend-option-input.width-type-full > .fw-inner {
 	width: 100%;
 }
 
@@ -1035,14 +1076,12 @@ body.rtl .fw-force-xs .fw-backend-option-design-default.with-help > .fw-backend-
 	color: #333333;
 }
 
-.fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner > .fw-option-help,
-.fw-backend-option-design-taxonomy.with-help > td > .fw-backend-option-input > .fw-inner > .fw-option-help {
+.fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner > .fw-option-help {
 	position: absolute;
 	top: 0;
 	right: 0px;
 }
-body.rtl .fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner > .fw-option-help,
-body.rtl .fw-backend-option-design-taxonomy.with-help > td > .fw-backend-option-input > .fw-inner > .fw-option-help {
+body.rtl .fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner > .fw-option-help {
 	right: auto;
 	left: 0;
 }
@@ -1055,22 +1094,18 @@ body.rtl .fw-backend-option-design-default.with-help > .fw-backend-option-label 
 }
 
 @media (min-width: 783px) {
-	.fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner,
-	.fw-backend-option-design-taxonomy.with-help > td > .fw-backend-option-input > .fw-inner {
+	.fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner {
 		padding-right: 26px;
 	}
-	body.rtl .fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner,
-	body.rtl .fw-backend-option-design-taxonomy.with-help > td > .fw-backend-option-input > .fw-inner {
+	body.rtl .fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner {
 		padding-right: 0;
 		padding-left: 26px;
 	}
 
-	.fw-force-xs .fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner,
-	.fw-force-xs .fw-backend-option-design-taxonomy.with-help > td > .fw-backend-option-input > .fw-inner {
+	.fw-force-xs .fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner {
 		padding-right: 0;
 	}
-	body.rtl .fw-force-xs .fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner,
-	body.rtl .fw-force-xs .fw-backend-option-design-taxonomy.with-help > td > .fw-backend-option-input > .fw-inner {
+	body.rtl .fw-force-xs .fw-backend-option-design-default.with-help > .fw-backend-option-input > .fw-inner {
 		padding-right: inherit;
 		padding-left: 0;
 	}
@@ -1081,31 +1116,90 @@ body.rtl .fw-backend-option-design-default.with-help > .fw-backend-option-label 
 
 /* Edit Term page */
 
-
-#edittag .form-table td {
-	padding: 9px 10px;
+#edittag td.fw-backend-container-content {
+	padding-left: 0;
 }
 
-.fw-backend-option-design-taxonomy input[type=checkbox],
-.fw-backend-option-design-taxonomy input[type=radio] {
+
+#edittag > .fw-backend-option,
+#edittag > .fw-backend-options-group > .fw-backend-option,
+#edittag > .fw-backend-option-type-multi .fw-backend-option,
+#edittag > .fw-backend-option-type-multi-picker .fw-backend-option {
+	padding: 15px 0;
+	border-bottom-width: 0;
+}
+
+@media (min-width: 783px) {
+	#edittag > .fw-backend-option > .fw-backend-option-label,
+	#edittag > .fw-backend-options-group > .fw-backend-option > .fw-backend-option-label,
+	#edittag > .fw-backend-option-type-multi .fw-backend-option > .fw-backend-option-label,
+	#edittag > .fw-backend-option-type-multi-picker .fw-backend-option > .fw-backend-option-label {
+		width: 219px;
+	}
+
+	#edittag > .fw-backend-option > .fw-backend-option-input,
+	#edittag > .fw-backend-options-group > .fw-backend-option > .fw-backend-option-input,
+	#edittag > .fw-backend-option-type-multi .fw-backend-option > .fw-backend-option-input,
+	#edittag > .fw-backend-option-type-multi-picker .fw-backend-option > .fw-backend-option-input {
+		width: calc(100% - 219px);
+	}
+
+	#edittag > .fw-backend-option > .fw-backend-option-desc,
+	#edittag > .fw-backend-options-group > .fw-backend-option > .fw-backend-option-desc,
+	#edittag > .fw-backend-option-type-multi .fw-backend-option > .fw-backend-option-desc {
+		margin-left: 219px;
+	}
+}
+
+#edittag .fw-backend-option input[type=checkbox],
+#edittag .fw-backend-option input[type=radio] {
 	width: auto;
 }
 
 @media (max-width: 782px) {
-	.fw-backend-option-design-taxonomy input[type=checkbox],
-	.fw-backend-option-design-taxonomy input[type=radio] {
+	#edittag .fw-backend-option input[type=checkbox],
+	#edittag .fw-backend-option input[type=radio] {
 		height: 25px;
 		width: 25px;
 	}
-
-	.fw-backend-option-design-taxonomy .fw-backend-option-label .fw-option-help {
-		display: inline-block !important;
-	}
 }
 
-.fw-backend-option-design-taxonomy .description,
-.fw-backend-option-design-taxonomy .fw-backend-option-desc {
-	font-size: 13px;
+#edittag .fw-backend-option .description,
+#edittag .fw-backend-option .fw-backend-option-desc .fw-inner {
+	font-size: 14px;
 }
 
 /* end: Edit Term page */
+
+/* Add Term page */
+
+#addtag .fw-backend-option {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#addtag .fw-postbox .fw-backend-option {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+/* end: Add Term page */
+
+/* modal fix https://github.com/ThemeFuse/Unyson/issues/1353 */
+
+@media (min-width: 1200px) {
+	.media-frame-content .fw-backend-option > .fw-backend-option-label.fw-col-lg-2 {
+		width: 25%;
+	}
+
+	.media-frame-content .fw-backend-option > .fw-backend-option-input.fw-col-lg-10 {
+		width: 75%;
+	}
+
+	.media-frame-content .fw-backend-option > .fw-backend-option-desc.fw-col-lg-offset-2 {
+		margin-left: 25%;
+		width: 75%;
+	}
+}
+
+/* end: modal fix */

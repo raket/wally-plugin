@@ -167,16 +167,9 @@ function fw_rand_md5() {
 	return md5(time() .'-'. uniqid(rand(), true) .'-'. mt_rand(1, 1000));
 }
 
-/**
- * Return last + 1
- */
 function fw_unique_increment() {
-	static $i = null;
-
-	if ($i === null)
-		$i = mt_rand(0, 9370);
-
-	return $i++;
+	static $i = 0;
+	return ++$i;
 }
 
 /**
@@ -1010,9 +1003,21 @@ function fw_get_google_fonts() {
 	try {
 		return FW_Cache::get($cache_key);
 	} catch (FW_Cache_Not_Found_Exception $e) {
-		$fonts = apply_filters('fw_google_fonts',
-			include(dirname(__FILE__) .'/fw-google-fonts.json.php')
-		);
+		$g_fonts = json_decode(fw_get_google_fonts_v2(), true);
+		$old_fonts = include(dirname(__FILE__) .'/fw-google-fonts.json.php');
+		$fonts = array();
+
+		foreach ( $g_fonts['items'] as $font ) {
+			$fonts[ $font['family'] ] = array(
+				'family' => $font['family'],
+				'variants' => $font['variants'],
+				'position' => isset($old_fonts[$font['family']])
+					? $old_fonts[$font['family']]['position']
+					: 99999
+			);
+		}
+
+		$fonts = apply_filters('fw_google_fonts', $fonts);
 
 		FW_Cache::set($cache_key, $fonts);
 
@@ -1021,15 +1026,16 @@ function fw_get_google_fonts() {
 }
 
 /**
- * @return Array with Google fonts
+ * @return string JSON encoded array with Google fonts
  */
 function fw_get_google_fonts_v2() {
 	$saved_data = get_option( 'fw_google_fonts', false );
+	$ttl = 7 * DAY_IN_SECONDS;
 
 	if (
 		false === $saved_data
 		||
-		( time() - $saved_data['last_update'] > ( time() - 7 * DAY_IN_SECONDS ) )
+		( $saved_data['last_update'] + $ttl < time() )
 	) {
 		$response = wp_remote_get( apply_filters( 'fw_googleapis_webfonts_url', 'http://google-webfonts-cache.unyson.io/v1/webfonts' ) );
 		$body     = wp_remote_retrieve_body( $response );
@@ -1046,10 +1052,14 @@ function fw_get_google_fonts_v2() {
 
 			return $body;
 		} else {
-			return ( ! empty( $saved_data['fonts'] ) )
-				? $saved_data['fonts']
-				: json_encode( array( 'items' => array() )
-			);
+			if ( empty( $saved_data['fonts'] ) ) {
+				$saved_data['fonts'] = json_encode( array( 'items' => array() ) );
+			}
+
+			update_option( 'fw_google_fonts', array(
+				'last_update' => time() - $ttl + MINUTE_IN_SECONDS,
+				'fonts'       => $saved_data['fonts']
+			), false );
 		}
 	}
 
@@ -1143,8 +1153,7 @@ function fw_current_user_can($capabilities, $default_value = null)
  * @param int $seconds
  * @return string
  */
-function fw_human_time($seconds)
-{
+function fw_human_time($seconds)  {
 	static $translations = null;
 	if ($translations === null) {
 		$translations = array(
@@ -1188,6 +1197,39 @@ function fw_human_time($seconds)
 		$number_of_units = floor($seconds / $unit);
 
 		return $number_of_units .' '. $translations[ $translation_key . ($number_of_units != 1 ? 's' : '') ];
+	}
+}
+
+/**
+ * Convert bytes to human readable format
+ *
+ * @param integer $bytes Size in bytes to convert
+ * @param integer $precision
+ * @return string
+ * @since 2.4.17
+ */
+function fw_human_bytes($bytes, $precision = 2) {
+	$kilobyte = 1024;
+	$megabyte = $kilobyte * 1024;
+	$gigabyte = $megabyte * 1024;
+	$terabyte = $gigabyte * 1024;
+
+	if (($bytes >= 0) && ($bytes < $kilobyte)) {
+		return $bytes . ' B';
+
+	} elseif (($bytes >= $kilobyte) && ($bytes < $megabyte)) {
+		return round($bytes / $kilobyte, $precision) . ' KB';
+
+	} elseif (($bytes >= $megabyte) && ($bytes < $gigabyte)) {
+		return round($bytes / $megabyte, $precision) . ' MB';
+
+	} elseif (($bytes >= $gigabyte) && ($bytes < $terabyte)) {
+		return round($bytes / $gigabyte, $precision) . ' GB';
+
+	} elseif ($bytes >= $terabyte) {
+		return round($bytes / $terabyte, $precision) . ' TB';
+	} else {
+		return $bytes . ' B';
 	}
 }
 
@@ -1265,7 +1307,7 @@ function fw_oembed_get($url, $args = array()) {
 
 	if (!empty($args['width']) and !empty($args['height']) and class_exists('DOMDocument') and !empty($html)) {
 		$dom_element = new DOMDocument();
-		$dom_element->loadHTML($html);
+		@$dom_element->loadHTML($html);
 		$obj = $dom_element->getElementsByTagName('iframe')->item(0);
 		$obj->setAttribute('width', $args['width']);
 		$obj->setAttribute('height', $args['height']);
@@ -1518,7 +1560,7 @@ function fw_string_to_icon_html($icon, array $attributes = array()) {
  * @since 2.4.10
  */
 function fw_get_json_last_error_message() {
-	switch (json_last_error()) {
+	switch (function_exists('json_last_error') ? json_last_error() : -1) {
 		case JSON_ERROR_NONE:
 			return null; // __('No errors', 'fw');
 			break;

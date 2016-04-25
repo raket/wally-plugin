@@ -128,13 +128,16 @@ abstract class FW_Option_Type
 			$data
 		);
 
-		$option = array_merge(
-			$this->get_defaults(),
-			$option,
-			array(
-				'type' => $this->get_type()
-			)
-		);
+		$defaults = $this->get_defaults();
+		$merge_attr = !empty($option['attr']) && !empty($defaults['attr']);
+
+		$option = array_merge($defaults, $option, array(
+			'type' => $this->get_type()
+		));
+
+		if ($merge_attr) {
+			$option['attr'] = array_merge($defaults['attr'], $option['attr']);
+		}
 
 		if (!isset($data['value'])) {
 			// if no input value, use default
@@ -274,7 +277,7 @@ abstract class FW_Option_Type
 
 		$option['type'] = $this->get_type();
 
-		if (!isset($option['value'])) {
+		if (!array_key_exists('value', $option)) {
 			FW_Flash_Messages::add(
 				'fw-option-type-no-default-value',
 				sprintf(__('Option type %s has no default value', 'fw'), $this->get_type()),
@@ -313,5 +316,83 @@ abstract class FW_Option_Type
 		}
 
 		fw()->backend->_register_option_type($registration_access_key, $option_type_class);
+	}
+
+	/**
+	 * If the option is composed of more options (added by user) which values are stored in database
+	 * the option must call fw_db_option_storage_load() for each sub-option
+	 * because some of them may have configured the save to be done in separate place (post meta, wp option, etc.)
+	 * @param string $id
+	 * @param array $option
+	 * @param mixed $value
+	 * @param array $params
+	 * @return mixed
+	 * @since 2.5.0
+	 */
+	final public function storage_load($id, array $option, $value, array $params = array()) {
+		if ( // do not check !empty($option['fw-storage']) because this param can be set in option defaults
+			$this->get_type() === $option['type']
+			&&
+			($option = array_merge($this->get_defaults(), $option))
+		) {
+			if (is_null($value)) {
+				$value = fw()->backend->option_type($option['type'])->get_value_from_input($option, $value);
+			}
+
+			return $this->_storage_load($id, $option, $value, $params);
+		} else {
+			return $value;
+		}
+	}
+
+	/**
+	 * @see storage_load()
+	 * @param string $id
+	 * @param array $option
+	 * @param mixed $value
+	 * @param array $params
+	 * @return mixed
+	 * @since 2.5.0
+	 * @internal
+	 */
+	protected function _storage_load($id, array $option, $value, array $params) {
+		return fw_db_option_storage_load($id, $option, $value, $params);
+	}
+
+	/**
+	 * If the option is composed of more options (added by user) which values are stored in database
+	 * the option must call fw_db_option_storage_save() for each sub-option
+	 * because some of them may have configured the save to be done in separate place (post meta, wp option, etc.)
+	 * @param string $id
+	 * @param array $option
+	 * @param mixed $value
+	 * @param array $params
+	 * @return mixed
+	 * @since 2.5.0
+	 */
+	final public function storage_save($id, array $option, $value, array $params = array()) {
+		if ( // do not check !empty($option['fw-storage']) because this param can be set in option defaults
+			$this->get_type() === $option['type']
+			&&
+			($option = array_merge($this->get_defaults(), $option))
+		) {
+			return $this->_storage_save($id, $option, $value, $params);
+		} else {
+			return $value;
+		}
+	}
+
+	/**
+	 * @see storage_save()
+	 * @param string $id
+	 * @param array $option
+	 * @param mixed $value
+	 * @param array $params
+	 * @return mixed
+	 * @since 2.5.0
+	 * @internal
+	 */
+	protected function _storage_save($id, array $option, $value, array $params) {
+		return fw_db_option_storage_save($id, $option, $value, $params);
 	}
 }

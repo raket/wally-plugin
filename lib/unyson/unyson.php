@@ -3,12 +3,12 @@
  * Plugin Name: Unyson
  * Plugin URI: http://unyson.io/
  * Description: A free drag & drop framework that comes with a bunch of built in extensions that will help you develop premium themes fast & easy.
- * Version: 2.4.11
+ * Version: 2.5.3
  * Author: ThemeFuse
  * Author URI: http://themefuse.com
  * License: GPL2+
  * Text Domain: fw
- * Domain Path: /languages/
+ * Domain Path: /framework/languages
  */
 
 if (defined('FW')) {
@@ -109,9 +109,9 @@ if (defined('FW')) {
 
 		/** @internal */
 		function _action_fw_textdomain() {
-			//load_plugin_textdomain( 'fw', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+			load_plugin_textdomain( 'fw', false, plugin_basename( dirname( __FILE__ ) ) . '/framework/languages' );
 		}
-		add_action( 'plugins_loaded', '_action_fw_textdomain' );
+		add_action( 'fw_before_init', '_action_fw_textdomain', 3 );
 
 		/** @internal */
 		function _filter_fw_tmp_dir( $dir ) {
@@ -145,7 +145,7 @@ if (defined('FW')) {
 					 * The plugin was already download and extracted to a temp directory
 					 * and it's right before being replaced with the new downloaded version
 					 */
-					do_action( 'fw_plugin_pre_update' ); self::_fw_update_debug_log('fw_plugin_pre_update');
+					do_action( 'fw_plugin_pre_update' );
 				}
 
 				return $result;
@@ -162,7 +162,7 @@ if (defined('FW')) {
 					/**
 					 * After plugin successfully updated
 					 */
-					do_action( 'fw_plugin_post_update' ); self::_fw_update_debug_log('fw_plugin_post_update');
+					do_action( 'fw_plugin_post_update' );
 				}
 
 				return $result;
@@ -175,40 +175,10 @@ if (defined('FW')) {
 
 				foreach ($results['plugin'] as $plugin) {
 					if (plugin_basename( __FILE__ ) === strtolower($plugin->item->plugin)) {
-						do_action( 'fw_automatic_update_complete', $plugin->result ); self::_fw_update_debug_log('fw_automatic_update_complete '. ($plugin->result ? 'OK' : 'NOT OK'));
+						do_action( 'fw_automatic_update_complete', $plugin->result );
 						break;
 					}
 				}
-			}
-
-			/**
-			 * Log debug information in ABSPATH/fw-update.log
-			 * @param string $message
-			 * @return bool|void
-			 */
-			private static function _fw_update_debug_log($message) {
-				/** @var WP_Filesystem_Base $wp_filesystem */
-				global $wp_filesystem;
-
-				if (!$wp_filesystem) {
-					return;
-				}
-
-				$file_fs_path = fw_fix_path($wp_filesystem->abspath()) .'/fw-update.log';
-
-				if ($wp_filesystem->exists($file_fs_path)) {
-					$current_log = $wp_filesystem->get_contents($file_fs_path);
-
-					if ($current_log === false) {
-						return false;
-					}
-				} else {
-					$current_log = '';
-				}
-
-				$message = '['. date('Y-m-d H:i:s') .'] '. $message;
-
-				$wp_filesystem->put_contents($file_fs_path, $current_log . $message ."\n");
 			}
 		}
 		_FW_Update_Hooks::_init();

@@ -55,6 +55,14 @@ class FW_Option_Type_Color_Picker extends FW_Option_Type
 		$option['attr']['onclick'] = 'this.select()';
 		$option['attr']['data-default'] = $option['value'];
 
+
+		$palettes = (bool) $option['palettes'];
+		if ( ! empty( $option['palettes'] ) && is_array( $option['palettes'] ) ) {
+			$palettes = $option['palettes'];
+		}
+
+		$option['attr']['data-palettes'] = json_encode( $palettes );
+
 		return '<input type="text" '. fw_attr_to_html($option['attr']) .'>';
 	}
 
@@ -63,7 +71,15 @@ class FW_Option_Type_Color_Picker extends FW_Option_Type
 	 */
 	protected function _get_value_from_input($option, $input_value)
 	{
-		if (!isset($input_value) || !preg_match('/^#[a-f0-9]{3}([a-f0-9]{3})?$/i', $input_value)) {
+		if (
+			is_null($input_value)
+			||
+			(
+				!is_null($input_value)
+				&&
+				!preg_match('/^#[a-f0-9]{3}([a-f0-9]{3})?$/i', $input_value)
+			)
+		) {
 			$input_value = $option['value'];
 		}
 
@@ -84,7 +100,8 @@ class FW_Option_Type_Color_Picker extends FW_Option_Type
 	protected function _get_defaults()
 	{
 		return array(
-			'value' => ''
+			'value' => '',
+			'palettes'=> true
 		);
 	}
 }
