@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Wally\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-15 10:09+0200\n"
-"PO-Revision-Date: 2016-04-15 10:13+0200\n"
+"PO-Revision-Date: 2016-04-25 15:26+0200\n"
 "Last-Translator: raket <daniel@raket.nu>\n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
@@ -1071,7 +1071,7 @@ msgstr ""
 #: lib/unyson/framework/extensions/update/views/updates-list.php:60
 #, php-format
 msgid "%s Extensions"
-msgstr ""
+msgstr "%s-tillägg"
 
 #: lib/unyson/framework/core/components/extensions/manager/class--fw-extensions-manager.php:873
 msgid "You are not allowed to install extensions."
@@ -3846,17 +3846,17 @@ msgstr ""
 #: lib/unyson/framework/extensions/update/views/updates-list.php:62
 #, php-format
 msgid "You have the latest version of %s Extensions."
-msgstr ""
+msgstr "Du har den senaste versionen av alla %s-tillägg."
 
 #: lib/unyson/framework/extensions/update/views/updates-list.php:80
 #: lib/unyson/framework/extensions/update/views/updates-list.php:95
 #: lib/unyson/framework/extensions/update/views/updates-list.php:100
 msgid "Update Extensions"
-msgstr ""
+msgstr "Uppdatera tillägg"
 
 #: lib/unyson/framework/extensions/update/views/updates-list.php:99
 msgid "New extensions updates available."
-msgstr ""
+msgstr "Nya tilläggsuppdateringar tillgängliga."
 
 #: lib/unyson/framework/helpers/class-fw-flash-messages.php:95
 #, php-format
