@@ -6,7 +6,7 @@ class Wally_Sitemap
 	/**
 	 * Holds the values to be used in the fields callbacks
 	 */
-	private $options;
+	public static $options;
 
 	/**
 	 * Start up
@@ -49,7 +49,7 @@ class Wally_Sitemap
 	 */
 	public function create_admin_page()
 	{
-		$this->options = get_option('wally_settings_sitemap');
+		Wally_Sitemap::$options = get_option('wally_settings_sitemap');
 		?>
 		<div class="wrap">
 			<h2>Webbplatskarta</h2>

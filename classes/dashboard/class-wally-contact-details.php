@@ -6,7 +6,7 @@ class Wally_Contact_Details
 	/**
 	 * Holds the values to be used in the fields callbacks
 	 */
-	private $options;
+	public static $options;
 
 	/**
 	 * Start up
@@ -42,7 +42,7 @@ class Wally_Contact_Details
 	 */
 	public function create_admin_page()
 	{
-		$this->options = get_option('wally_settings_contact_details');
+		Wally_Contact_Details::$options = get_option('wally_settings_contact_details');
 
 		?>
 		<div class="wrap">
@@ -86,7 +86,7 @@ class Wally_Contact_Details
 			function() {
 				printf(
 					'<input type="tel" id="phone" name="wally_settings_contact_details[phone]" value="%s" />',
-					isset( $this->options['phone'] ) ? esc_attr( $this->options['phone']) : ''
+					isset( Wally_Contact_Details::$options['phone'] ) ? esc_attr( Wally_Contact_Details::$options['phone']) : ''
 				);
 			},
 			'wally_settings_contact_details',
@@ -99,7 +99,7 @@ class Wally_Contact_Details
 			function() {
 				printf(
 					'<input type="email" id="email" name="wally_settings_contact_details[email]" value="%s" />',
-					isset( $this->options['email'] ) ? esc_attr( $this->options['email']) : ''
+					isset( Wally_Contact_Details::$options['email'] ) ? esc_attr( Wally_Contact_Details::$options['email']) : ''
 				);
 			},
 			'wally_settings_contact_details',
@@ -112,7 +112,7 @@ class Wally_Contact_Details
 			function() {
 				printf(
 					'<input type="fax" id="fax" name="wally_settings_contact_details[fax]" value="%s" />',
-					isset( $this->options['fax'] ) ? esc_attr( $this->options['fax']) : ''
+					isset( Wally_Contact_Details::$options['fax'] ) ? esc_attr( Wally_Contact_Details::$options['fax']) : ''
 				);
 			},
 			'wally_settings_contact_details',
@@ -124,7 +124,7 @@ class Wally_Contact_Details
 			__('Adress', 'fw'),
 			function() {
 				wp_editor(sprintf(
-					'%s', isset( $this->options['address'] ) ? $this->options['address'] : ''
+					'%s', isset( Wally_Contact_Details::$options['address'] ) ? Wally_Contact_Details::$options['address'] : ''
 				), 'footerAdress', array(
 					'textarea_name' => 'wally_settings_contact_details[address]',
 					'textarea_rows' => 3,
@@ -142,7 +142,7 @@ class Wally_Contact_Details
 			function() {
 				printf(
 					'<input type="zip_code" id="zip_code" name="wally_settings_contact_details[zip_code]" value="%s" />',
-					isset( $this->options['zip_code'] ) ? esc_attr( $this->options['zip_code']) : ''
+					isset( Wally_Contact_Details::$options['zip_code'] ) ? esc_attr( Wally_Contact_Details::$options['zip_code']) : ''
 				);
 			},
 			'wally_settings_contact_details',
@@ -155,7 +155,7 @@ class Wally_Contact_Details
 			function() {
 				printf(
 					'<input type="city" id="city" name="wally_settings_contact_details[city]" value="%s" />',
-					isset( $this->options['city'] ) ? esc_attr( $this->options['city']) : ''
+					isset( Wally_Contact_Details::$options['city'] ) ? esc_attr( Wally_Contact_Details::$options['city']) : ''
 				);
 			},
 			'wally_settings_contact_details',
@@ -177,7 +177,7 @@ class Wally_Contact_Details
 			__('Webbplatsbeskrivning', 'fw'),
 			function() {
 				wp_editor(sprintf(
-					'%s', isset( $this->options['website_description'] ) ? $this->options['website_description'] : ''
+					'%s', isset( Wally_Contact_Details::$options['website_description'] ) ? Wally_Contact_Details::$options['website_description'] : ''
 				), 'footerContent', array(
 					'textarea_name' => 'wally_settings_contact_details[website_description]',
 					'textarea_rows' => 3
@@ -202,7 +202,7 @@ class Wally_Contact_Details
 			__('Webbplatsbeskrivning', 'fw'),
 			function() {
 				wp_editor(sprintf(
-					'%s', isset( $this->options['website_description'] ) ? $this->options['website_description'] : ''
+					'%s', isset( Wally_Contact_Details::$options['website_description'] ) ? Wally_Contact_Details::$options['website_description'] : ''
 				), 'footerContent', array(
 					'textarea_name' => 'wally_settings_contact_details[website_description]',
 					'textarea_rows' => 3

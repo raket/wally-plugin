@@ -6,7 +6,7 @@ class Wally_Social_media
 	/**
 	 * Holds the values to be used in the fields callbacks
 	 */
-	private $options;
+	public static $options;
 
 	/**
 	 * Start up
@@ -42,7 +42,7 @@ class Wally_Social_media
 	 */
 	public function create_admin_page()
 	{
-		$this->options = get_option('wally_settings_social_media');
+		Wally_Social_Media::$options = get_option('wally_settings_social_media');
 		?>
 		<div class="wrap">
 			<h1>Temainställningar</h1>
@@ -85,7 +85,7 @@ class Wally_Social_media
 			function() {
 				printf(
 					'<input type="text" id="facebook" name="wally_settings_social_media[facebook]" value="%s" />',
-					isset( $this->options['facebook'] ) ? esc_attr( $this->options['facebook']) : ''
+					isset( Wally_Social_Media::$options['facebook'] ) ? esc_attr( Wally_Social_Media::$options['facebook']) : ''
 				);
 			},
 			'wally_settings_social_media'
@@ -97,7 +97,7 @@ class Wally_Social_media
 			function() {
 				printf(
 					'<input type="text" id="twitter" name="wally_settings_social_media[twitter]" value="%s" />',
-					isset( $this->options['twitter'] ) ? esc_attr( $this->options['twitter']) : ''
+					isset( Wally_Social_Media::$options['twitter'] ) ? esc_attr( Wally_Social_Media::$options['twitter']) : ''
 				);
 			},
 			'wally_settings_social_media'
@@ -109,7 +109,7 @@ class Wally_Social_media
 			function() {
 				printf(
 					'<input type="text" id="youtube" name="wally_settings_social_media[youtube]" value="%s" />',
-					isset( $this->options['youtube'] ) ? esc_attr( $this->options['youtube']) : ''
+					isset( Wally_Social_Media::$options['youtube'] ) ? esc_attr( Wally_Social_Media::$options['youtube']) : ''
 				);
 			},
 			'wally_settings_social_media'
@@ -121,7 +121,7 @@ class Wally_Social_media
 			function() {
 				printf(
 					'<input type="text" id="bambuser" name="wally_settings_social_media[bambuser]" value="%s" />',
-					isset($this->options['bambuser']) ? esc_attr( $this->options['bambuser']) : ''
+					isset(Wally_Social_Media::$options['bambuser']) ? esc_attr( Wally_Social_Media::$options['bambuser']) : ''
 				);
 			},
 			'wally_settings_social_media'

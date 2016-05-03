@@ -6,7 +6,7 @@ class Wally_Welcome
 	/**
 	 * Holds the values to be used in the fields callbacks
 	 */
-	private $options;
+	public static $options;
 
 	/**
 	 * Start up
@@ -41,7 +41,7 @@ class Wally_Welcome
 	 */
 	public function create_admin_page()
 	{
-		$this->options = get_option('wally_settings');
+		Wally_Welcome::$options = get_option('wally_settings');
 		$plugin_url = Wally::get_instance()->pluginurl;  ?>
 
 		<div class="wrap dashboard__welcome">
