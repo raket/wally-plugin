@@ -98,9 +98,10 @@ embed {
 	margin-left: auto;
 	padding-left: 15px;
 	padding-right: 15px;
+	max-width: 100%;
 }
 
-/*@media (min-width: 768px) {
+@media (min-width: 768px) {
 	.fw-container {
 		width: 750px;
 	}
@@ -114,7 +115,7 @@ embed {
 	.fw-container {
 		width: 1170px;
 	}
-}*/
+}
 .fw-container-fluid {
 	position: relative;
 	margin-right: auto;
