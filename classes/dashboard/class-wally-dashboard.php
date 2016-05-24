@@ -30,7 +30,7 @@ class Wally_Dashboard
 			delete_option('wally_do_activation_redirect');
 			if(!isset($_GET['activate-multi']))
 			{
-				wp_redirect(admin_url('admin.php?page=wally_settings_welcome&activated=true'));
+				wp_redirect(admin_url('admin.php?page=wally_settings&activated=true'));
 				exit;
 			}
 		}
