@@ -44,8 +44,7 @@ class Wally_Dashboard
 		add_menu_page(
 			'Wally',
 			'Wally',
-//			 'manage_options', // is null for now as we dont want a "main" page
-			null,
+			'manage_options', // is null for now as we dont want a "main" page
 			'wally_settings',
 //			array( $this, '_add_dashboard_page' ),
 			false,

@@ -31,7 +31,7 @@ class Wally_Welcome
 			'Välkommen',
 			'Välkommen',
 			'manage_options',
-			'wally_settings_welcome',
+			'wally_settings',
 			array($this, 'create_admin_page')
 		);
 	}
@@ -46,7 +46,7 @@ class Wally_Welcome
 
 		<div class="wrap dashboard__welcome">
 
-		<?php //if(isset($_GET['activated'])): ?>
+			<?php //if(isset($_GET['activated'])): ?>
 			<section class="dashboard__welcome__intro">
 				<h1>Välkommen till Wally!</h1>
 				<p class="about-text">Wally är ett WordPress-tema som hjälper dig att skapa en tillgänglighetsanpassad webbplats. Här nedanför finns tips på några av Wallys unika funktioner:</p>
