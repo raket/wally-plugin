@@ -1,3 +1,6 @@
+# Remove old (if any)
+rm -f wally-plugin.zip
+
 # Compress files
 zip -r wally-plugin.zip . -x \*.git\* \*node_modules\* \*bower_components\* gulpfile.js deploy.sh wally-plugin.zip \*.DS_Store\*
 
