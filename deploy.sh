@@ -1,0 +1,1 @@
+zip -r wally-plugin.zip . -x \*.git\* \*node_modules\* \*bower_components\* gulpfile.js deploy.sh wally-plugin.zip

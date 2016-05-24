@@ -11,3 +11,4 @@ assets/bower/
 assets/css/
 assets/js/build/
 lib/**/*/.gitignore
+wally-plugin.zip
