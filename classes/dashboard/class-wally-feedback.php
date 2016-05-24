@@ -37,7 +37,7 @@ class Wally_Feedback
 	 */
 	public function create_admin_page()
 	{
-		$plugin_url = Wally::get_instance()->pluginurl;  ?>
+		$plugin_url = Wally::get_instance()->pluginurl ?>
 
 		<div class="wrap dashboard__welcome">
 

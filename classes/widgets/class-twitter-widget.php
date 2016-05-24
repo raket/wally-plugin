@@ -77,12 +77,12 @@ class Twitter_Widget extends WP_Widget {
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'widget-id' ); ?>"><?php _e( 'Twitter-widget ID:', 'fw' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'widget-id' ); ?>" name="<?php echo $this->get_field_name( 'widget-id' ); ?>" type="number" value="<?php echo ($instance['widget-id']); ?>" placeholder="661829263294922752">
+			<label for="<?php echo $this->get_field_id( 'widget-id' ) ?>"><?php _e( 'Twitter-widget ID:', 'fw' ) ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'widget-id' ) ?>" name="<?php echo $this->get_field_name( 'widget-id' ) ?>" type="number" value="<?php echo ($instance['widget-id']) ?>" placeholder="661829263294922752">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'timeline' ); ?>"><?php _e( 'URL till Twitter-användare:', 'fw' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'timeline' ); ?>" name="<?php echo $this->get_field_name( 'timeline' ); ?>" type="url" value="<?php echo ($instance['timeline']); ?>" placeholder="https://twitter.com/twitter">
+			<label for="<?php echo $this->get_field_id( 'timeline' ) ?>"><?php _e( 'URL till Twitter-användare:', 'fw' ) ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'timeline' ) ?>" name="<?php echo $this->get_field_name( 'timeline' ) ?>" type="url" value="<?php echo ($instance['timeline']) ?>" placeholder="https://twitter.com/twitter">
 		</p>
 		<p><?php echo sprintf(__('För att skapa en widget klickar du <a href="%s" target="_blank">här</a>.'), 'https://twitter.com/settings/widgets/new') ?></p>
 		<?php

@@ -63,8 +63,8 @@ class Facebook_Feed extends WP_Widget {
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'page' ); ?>"><?php _e( 'Sida att hämta inlägg från:', 'fw' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'page' ); ?>" name="<?php echo $this->get_field_name( 'page' ); ?>" type="url" value="<?php echo esc_attr($instance['page']); ?>" placeholder="<?php echo esc_attr($instance['page']); ?>>">
+			<label for="<?php echo $this->get_field_id( 'page' ) ?>"><?php _e( 'Sida att hämta inlägg från:', 'fw' ) ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'page' ) ?>" name="<?php echo $this->get_field_name( 'page' ) ?>" type="url" value="<?php echo esc_attr($instance['page']) ?>" placeholder="<?php echo esc_attr($instance['page']) ?>>">
 		</p>
 		<?php
 	}

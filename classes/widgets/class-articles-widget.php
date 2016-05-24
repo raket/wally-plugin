@@ -49,13 +49,13 @@ class Articles_Widget extends WP_Widget {
 				?>
 				<article class="article-box" role="article" aria-labelledby="post-<?php $article->ID ?>">
 					<?php if(has_post_thumbnail($article->ID)): ?>
-					<div class="image thumbnail thumbnail--small" data-image="<?= $thumbnail_small; ?>" >
+					<div class="image thumbnail thumbnail--small" data-image="<?= $thumbnail_small ?>" >
 						<img src="<?= $thumbnail_small ?>" alt="<?php ?>">
 					</div>
-					<?php endif; ?>
-					<a href="<?php echo get_the_permalink($article->ID); ?>">
+					<?php endif ?>
+					<a href="<?php echo get_the_permalink($article->ID) ?>">
 						<div class="article-box__header--below-figure">
-							<h3 id="post-<?php echo $article->ID ?>"><?php echo $article->post_title; ?></h3>
+							<h3 id="post-<?php echo $article->ID ?>"><?php echo $article->post_title ?></h3>
 						</div>
 					</a>
 				</article>
@@ -80,8 +80,8 @@ class Articles_Widget extends WP_Widget {
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number-of-posts' ); ?>"><?php _e( 'Max antal artiklar:', 'fw' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'number-of-posts' ); ?>" name="<?php echo $this->get_field_name( 'number-of-posts' ); ?>" type="number" value="<?php echo ($instance['number-of-posts']); ?>" value="5" placeholder="5">
+			<label for="<?php echo $this->get_field_id( 'number-of-posts' ) ?>"><?php _e( 'Max antal artiklar:', 'fw' ) ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'number-of-posts' ) ?>" name="<?php echo $this->get_field_name( 'number-of-posts' ) ?>" type="number" value="<?php echo ($instance['number-of-posts']) ?>" value="5" placeholder="5">
 		</p>
 		<?php
 	}
