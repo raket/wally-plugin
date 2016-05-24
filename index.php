@@ -1,12 +1,12 @@
 <?php
 /*
  Plugin Name: Wally
- Plugin URI: http://wally.io/
+ Plugin URI: http://wally-wp.se/
  Description: Ett tillägg för att förbättra tillgänglighet.
  Text Domain: wally
  Domain Path: /lang
  Author: Raket Webbyrå
- Version: 0.31
+ Version: 1.0.3
  */
 if ( ! defined( 'ABSPATH' ) ) die( 'Forbidden' );
 
