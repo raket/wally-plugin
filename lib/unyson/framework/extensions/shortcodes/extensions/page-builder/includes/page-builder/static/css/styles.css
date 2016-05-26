@@ -1,0 +1,48 @@
+/* Thumbs */
+.fw-option-type-builder.fw-option-type-page-builder .builder-item-type {
+	display: block;
+}
+.fw-option-type-page-builder .builder-item-type .inner {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: relative;
+	padding-top: 15px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.fw-option-type-page-builder .builder-item-type .inner.no-image {
+	padding: 0;
+}
+.fw-option-type-page-builder .builder-item-type img {
+	display: inline-block;
+	opacity: 0.66;
+}
+.fw-option-type-page-builder .builder-item-type:hover img {
+	opacity: 1;
+}
+.fw-option-type-page-builder .builder-item-type p {
+	position: absolute;
+	left: 3px;
+	right: 3px;
+	bottom: 5px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0;
+}
+.fw-option-type-page-builder .builder-item-type .inner.no-image p {
+	position: static;
+	margin: 0 3px;
+	line-height: 70px;
+}
+.fw-option-type-page-builder .builder-item-type p span {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1.2;
+	font-size: 10px;
+	color: #666;
+}
+.fw-option-type-page-builder .builder-item-type:hover p span {
+	color: #484848;
+}
