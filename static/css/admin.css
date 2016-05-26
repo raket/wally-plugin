@@ -309,7 +309,7 @@ input[type="radio"]:checked + label:hover {
   box-shadow: none !important;
   border: none !important; }
 
-.dashboard__wally textarea, [class*="wally_page"] #wpwrap textarea, .dashboard__welcome textarea, .dashboard__wally input, [class*="wally_page"] #wpwrap input, .dashboard__welcome input {
+.dashboard__wally textarea, [class*="wally_page"] #wpwrap textarea, .dashboard__welcome textarea, .dashboard__wally input:not([type=button]), [class*="wally_page"] #wpwrap input:not([type=button]), .dashboard__welcome input:not([type=button]) {
   padding: 1rem; }
 
 .dashboard__wally .box, [class*="wally_page"] #wpwrap .box, .dashboard__welcome .box, .dashboard__wally .form-table, [class*="wally_page"] #wpwrap .form-table, .dashboard__welcome .form-table {
@@ -337,7 +337,7 @@ input[type="radio"]:checked + label:hover {
     border-bottom: solid 1px rgba(0, 0, 0, 0.1); }
     .dashboard__wally .form-table tr td, [class*="wally_page"] #wpwrap .form-table tr td, .dashboard__welcome .form-table tr td, .dashboard__wally .form-table tr th, [class*="wally_page"] #wpwrap .form-table tr th, .dashboard__welcome .form-table tr th {
       padding: 1rem; }
-      .dashboard__wally .form-table tr td input, [class*="wally_page"] #wpwrap .form-table tr td input, .dashboard__welcome .form-table tr td input, .dashboard__wally .form-table tr th input, [class*="wally_page"] #wpwrap .form-table tr th input, .dashboard__welcome .form-table tr th input {
+      .dashboard__wally .form-table tr td input:not([type=button]), [class*="wally_page"] #wpwrap .form-table tr td input:not([type=button]), .dashboard__welcome .form-table tr td input:not([type=button]), .dashboard__wally .form-table tr th input:not([type=button]), [class*="wally_page"] #wpwrap .form-table tr th input:not([type=button]), .dashboard__welcome .form-table tr th input:not([type=button]) {
         width: 100%; }
     .dashboard__wally .form-table tr td, [class*="wally_page"] #wpwrap .form-table tr td, .dashboard__welcome .form-table tr td {
       width: 100%; }
