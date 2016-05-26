@@ -11,7 +11,7 @@ $manifest['description'] = __(
 	'fw'
 );
 $manifest['version'] = '1.0.8';
-$manifest['display'] = true;
+$manifest['display'] = false;
 $manifest['standalone'] = true;
 
 $manifest['github_update'] = 'ThemeFuse/Unyson-Breadcrumbs-Extension';
