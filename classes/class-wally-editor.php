@@ -34,7 +34,8 @@ class Wally_Editor
      */
     public function _w_editor_modes($post_type)
     {
-        $post_types = array('page');   //limit meta box to certain post types
+	    //limit meta box to certain post types
+	    $post_types = apply_filters('_w_editor_mode_post_types', array('page'));
         if (in_array($post_type, $post_types)) {
             add_meta_box(
                 'wally_editor_mode'
