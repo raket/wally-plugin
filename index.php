@@ -6,7 +6,7 @@
  Text Domain: wally
  Domain Path: /lang
  Author: Raket Webbyrå
- Version: 1.0.3
+ Version: 1.0.4
  */
 if ( ! defined( 'ABSPATH' ) ) die( 'Forbidden' );
 
