@@ -38,8 +38,8 @@ class FW_Extension_Update extends FW_Extension
 			}
 		}
 
-		$this->add_actions();
-		$this->add_filters();
+//		$this->add_actions();
+//		$this->add_filters();
 	}
 
 	private function add_actions()
