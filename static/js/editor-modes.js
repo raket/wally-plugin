@@ -1,4 +1,4 @@
-if(
+if (
     typeof fwEvents !== 'undefined' &&
     typeof fw_option_type_page_builder_editor_integration_data !== 'undefined'
 ) {
@@ -10,21 +10,21 @@ if(
          */
         var gui = {
             events: _.extend({}, Backbone.Events),
-            getWPEditorContent: function() {
+            getWPEditorContent: function () {
                 if (this.elements.$wpContentWrap.hasClass('tmce-active')) {
                     return tinyMCE.get('content').getContent();
                 } else {
                     return this.elements.$wpContentWrap.find('#content').val();
                 }
             },
-            clearWPEditorContent: function() {
+            clearWPEditorContent: function () {
                 if (this.elements.$wpContentWrap.hasClass('tmce-active')) {
                     return tinyMCE.get('content').setContent('');
                 } else {
                     return this.elements.$wpContentWrap.find('#content').val('');
                 }
             },
-            showAdvancedMode: function() {
+            showAdvancedMode: function () {
                 this.elements.$wpPostStuff.addClass('wally-advanced-mode-visible');
                 this.elements.$wpPostBodyContent.addClass('page-builder-visible');
 
@@ -39,7 +39,7 @@ if(
 
                 this.events.trigger('show');
             },
-            hideAdvancedMode: function() {
+            hideAdvancedMode: function () {
                 this.elements.$wpPostStuff.removeClass('wally-advanced-mode-visible');
                 this.elements.$wpPostBodyContent.removeClass('page-builder-visible');
 
@@ -57,7 +57,7 @@ if(
 
                 this.events.trigger('hide');
             },
-            showEasyMode: function() {
+            showEasyMode: function () {
 
                 this.elements.$wpPostStuff.addClass('wally-easy-mode-visible');
                 $('#edit-slug-box').hide();
@@ -72,12 +72,12 @@ if(
 
                 var editor = tinyMCE.get(window.wpActiveEditor),
                     toolbars = editor.theme.panel.find('.toolbar:not(.menubar)');
-                if(toolbars.length > 1 && toolbars[1].visible()) {
+                if (toolbars.length > 1 && toolbars[1].visible()) {
                     editor.execCommand('wp_adv');
                 }
 
             },
-            hideEasyMode: function() {
+            hideEasyMode: function () {
                 this.elements.$wpPostStuff.removeClass('wally-easy-mode-visible');
                 $('#edit-slug-box').show();
 
@@ -85,7 +85,7 @@ if(
                 this.elements.$metaBox.find('#wally_editor_mode_easy').attr('checked', false);
 
             },
-            fixOnFirstShowOrHide: function(isShow) {
+            fixOnFirstShowOrHide: function (isShow) {
                 var initialStateIsShow = data.renderInBuilderMode;
 
                 if (initialStateIsShow == isShow) {
@@ -121,9 +121,10 @@ if(
                  * This method must be called only once
                  * Prevent call again
                  */
-                this.fixOnFirstShowOrHide = function(){};
+                this.fixOnFirstShowOrHide = function () {
+                };
             },
-            initButtons: function() {
+            initButtons: function () {
                 // insert the custom buttons
                 $('.wally_editor_mode_easy_wrap').append(this.elements.$easyButton);
                 $('.wally_editor_mode_default_wrap').append(this.elements.$defaultButton);
@@ -131,13 +132,15 @@ if(
 
                 // hide unyson's default button
                 var $unysonButton = $('#wp-content-media-buttons .button.button-primary');
-                $unysonButton.each(function() {
-                    if($(this).text() == data.l10n.showButton) {
+                $unysonButton.each(function () {
+                    if ($(this).text() == data.l10n.showButton) {
                         $(this).remove();
                     }
                 });
                 $('.page-builder-hide-button').hide();
 
+                console.log(data.renderInBuilderMode);
+                console.log(data);
                 if (data.renderInBuilderMode) {
                     this.showAdvancedMode();
                 } else {
@@ -146,12 +149,12 @@ if(
             },
 
             //@todo: Fix bug which causes all events to fire twice
-            bindEvents: function() {
+            bindEvents: function () {
                 var self = this;
                 var userSetting = getUserSetting('editor');
 
                 var currentState;
-                if(data.renderInBuilderMode === "1") {
+                if (data.renderInBuilderMode === "1") {
                     currentState = 'advanced';
                 } else {
                     currentState = userSetting;
@@ -160,12 +163,12 @@ if(
                 /**
                  * Bind click on easy editor button
                  */
-                this.elements.$easyButton.on('click', function(e) {
+                this.elements.$easyButton.on('click', function (e) {
                     e.preventDefault();
 
-                    if(data.renderInBuilderMode === "1" && currentState === "advanced") {
+                    if (data.renderInBuilderMode === "1" && currentState === "advanced") {
                         self.openDialog('Den här sidan är byggd med en avancerad sidbyggare. Är du säker på att du vill fortsätta?').then(
-                            function() {
+                            function () {
                                 self.hideAdvancedMode();
                                 self.showEasyMode();
                                 currentState = 'easy';
@@ -182,11 +185,11 @@ if(
                 /**
                  * Bind click on default editor button
                  */
-                this.elements.$defaultButton.on('click', function(e) {
+                this.elements.$defaultButton.on('click', function (e) {
                     e.preventDefault();
-                    if(data.renderInBuilderMode === "1" && currentState === "advanced") {
+                    if (data.renderInBuilderMode === "1" && currentState === "advanced") {
                         self.openDialog('Den här sidan är byggd med en avancerad sidbyggare. Är du säker på att du vill fortsätta?').then(
-                            function() {
+                            function () {
                                 self.hideAdvancedMode();
                                 self.hideEasyMode();
                                 $('#wally_editor_mode_default').attr('checked', true);
@@ -203,11 +206,11 @@ if(
                 /**
                  * Bind click on advanced editor button
                  */
-                this.elements.$advancedButton.on('click', function(e) {
+                this.elements.$advancedButton.on('click', function (e) {
                     e.preventDefault();
-                    if(data.renderInBuilderMode !== "1" && currentState !== 'advanced') {
+                    if (data.renderInBuilderMode !== "1" && currentState !== 'advanced') {
                         self.openDialog('Den här sidan är <strong>inte</strong> byggd med en avancerad sidbyggare. Är du säker på att du vill fortsätta?').then(
-                            function() {
+                            function () {
                                 self.showAdvancedMode();
                                 self.hideEasyMode();
                                 currentState = 'advanced';
@@ -221,12 +224,12 @@ if(
                 });
 
             },
-            openDialog: function(question) {
-                var html = '<div id="confirm-dialog" role="dialog" aria-labelledby="confirmDialogTitle" tabindex="0"><h2 id="confirmDialogTitle">'+question+'</h2><button class="action-confirm button button-large" tabindex="0">Ja</button><button class="action-cancel button button-primary button-large" tabindex="0">Nej, avbryt</button></div><div id="confirm-dialog-overlay"></div>',
+            openDialog: function (question) {
+                var html = '<div id="confirm-dialog" role="dialog" aria-labelledby="confirmDialogTitle" tabindex="0"><h2 id="confirmDialogTitle">' + question + '</h2><button class="action-confirm button button-large" tabindex="0">Ja</button><button class="action-cancel button button-primary button-large" tabindex="0">Nej, avbryt</button></div><div id="confirm-dialog-overlay"></div>',
                     $body = $('body');
 
                 // Dont print multiple dialogs
-                if($body.find('#confirm-dialog').length > 0) {
+                if ($body.find('#confirm-dialog').length > 0) {
                     console.log('return false!');
                     return false;
                 }
@@ -236,33 +239,32 @@ if(
                 $confirmDialog.focus();
 
                 //Return a promise telling the calling function if the user confirmed or not
-                return new Promise(function(resolve, reject) {
+                return new Promise(function (resolve, reject) {
 
                     // Add event listener to confirm button
                     $confirmDialog.find('.action-confirm')
-                        .on('click', function() {
+                        .on('click', function () {
                             $body.find('#confirm-dialog, #confirm-dialog-overlay').remove();
                             resolve('User confirmed');
                         });
 
                     // Add event listener to cancel button
                     $confirmDialog.find('.action-cancel')
-                        .on('click', function() {
+                        .on('click', function () {
                             $body.find('#confirm-dialog, #confirm-dialog-overlay').remove();
                             reject('User declined');
                         });
-
 
 
                 });
 
 
             },
-            setDefaultEditor: function() {
+            setDefaultEditor: function () {
                 var self = this;
                 var initialStateIsShow = data.renderInBuilderMode,
                     userSetting = getUserSetting('editor');
-                var intervalId = setInterval(function(){
+                var intervalId = setInterval(function () {
                     if (
                         typeof tinyMCE != 'undefined'
                         &&
@@ -271,23 +273,23 @@ if(
                         clearInterval(intervalId);
 
                         // If page is built with the page builder and the user isn't advanced
-                        if(initialStateIsShow && userSetting !== 'advanced') {
+                        if (initialStateIsShow && userSetting !== 'advanced') {
 
                             self.openDialog('Den här sidan är byggd med en avancerad sidbyggare. Är du säker på att du vill fortsätta?').then(
                                 // If user confirmed
-                                function() {
+                                function () {
                                     self.showAdvancedMode();
                                     self.hideEasyMode();
                                 },
                                 //If they declined
-                                function() {
+                                function () {
                                     window.history.back();
                                 }
                             );
 
                         } else {
 
-                            switch(userSetting) {
+                            switch (userSetting) {
                                 case 'easy':
                                     //self.elements.$easyButton.click();
                                     self.hideAdvancedMode();
@@ -314,7 +316,25 @@ if(
 
         // This is not very sexy
         // We should only have to wait for Unyson to add its button for us to remove it
-        $(window).load(function() {
+        $(window).load(function () {
+            initUI();
+        });
+
+        /**
+         * Initialize UI.
+         * Recursive function, fires until the DOM is ready
+         */
+        function initUI() {
+            var builderActiveNodeExists = $('[name="page-builder-active"]').length > 0;
+
+            if(!builderActiveNodeExists) {
+                setTimeout(function () {
+                    requestAnimationFrame(function() {
+                        initUI();
+                    });
+                },100);
+                return;
+            }
 
             gui.elements = {
 
@@ -335,11 +355,11 @@ if(
 
             // Apparently, we have to have this - otherwise editors dont load
             {
-                gui.events.once('show', _.bind(function(){
+                gui.events.once('show', _.bind(function () {
                     gui.fixOnFirstShowOrHide(true);
                 }, gui));
 
-                gui.events.once('hide', _.bind(function(){
+                gui.events.once('hide', _.bind(function () {
                     gui.fixOnFirstShowOrHide(false);
                 }, gui));
             }
@@ -347,7 +367,7 @@ if(
             gui.initButtons();
             gui.bindEvents();
             //gui.setDefaultEditor();
-        });
+        }
 
 
     })(jQuery, fwEvents, fw_option_type_page_builder_editor_integration_data);
